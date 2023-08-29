@@ -5634,6 +5634,13 @@ select option {
  * --------------------------------------------------------------------
  */
 
+ .header__action-location {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+ }
+
 .header__action-list {
   display: flex;
   align-items: center;
@@ -5835,6 +5842,12 @@ select option {
     margin-right: 0;
   }
 
+  .header__location-icon {
+    display: inline-block;
+    margin-right: 16px;
+    top: -1px;
+  }
+  
   .header__cart-icon {
     display: inline-block;
     margin-right: 22px;
@@ -5862,7 +5875,7 @@ select option {
   display: flex;
   height: 44px;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 12px;
   background: var(--secondary-background);
   color: var(--text-color);
   z-index: 1;
