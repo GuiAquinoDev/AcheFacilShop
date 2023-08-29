@@ -7254,7 +7254,7 @@ select option {
     opacity: 1;
   }
 
-  .nav-bar__link.list--unstyled {
+  .nav-bar__linklist .list--unstyled{
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
