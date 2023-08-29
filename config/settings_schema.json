@@ -113,6 +113,12 @@
       },
       {
         "type": "color",
+        "id": "header_menu_background",
+        "label": "Background",
+        "default": "#2d2838"
+      },
+      {
+        "type": "color",
         "id": "header_text_color",
         "label": "Text",
         "default": "#ffffff"
