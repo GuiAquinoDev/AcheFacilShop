@@ -7206,15 +7206,16 @@ select option {
     width: 40px;
     right: 0;
     top: 0;
-    background: linear-gradient(to right, rgba(var(--secondary-background-rgb), 0.1), rgba(var(--secondary-background-rgb), 0.6) 35%, var(--secondary-background));
+    background: var(--header-menu-background);
   }
 
   .nav-bar__item {
     position: relative;
     display: inline-flex;
     gap: 6px;
-    margin-right: 35px;
     padding: 17px 0;
+
+    color: var(--header-text-color);
   }
 
   .nav-bar__item--static {
