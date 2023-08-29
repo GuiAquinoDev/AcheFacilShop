@@ -5529,8 +5529,8 @@ select option {
 }
 
 .header .icon--account {
-  width: 20px;
-  height: 22px;
+  width: 100%;
+  height: 28px;
 }
 
 .header .icon--hamburger {
@@ -5543,9 +5543,19 @@ select option {
   height: 16px;
 }
 
+.header .icon--bag {
+  width: 100%;
+  height: 28px;
+}
+
 .header .icon--cart {
   width: 27px;
   height: 24px;
+}
+
+.header .icon--location {
+  width: 100%;
+  height: 28px;
 }
 
 .header .icon--search {
@@ -5557,6 +5567,12 @@ select option {
 .header .icon--close {
   width: 19px;
   height: 19px;
+}
+
+.icon--arrow-down {
+  width: 1em;
+  height: 1em;
+  margin-left: -3px;
 }
 
 @media screen and (max-width: 640px) {

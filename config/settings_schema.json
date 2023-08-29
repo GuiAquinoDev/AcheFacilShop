@@ -15,7 +15,7 @@
         "content": "General"
       },
       {
-        "type": "color",
+        "type": "col>or",
         "id": "heading_color",
         "label": "Titulos",
         "default": "#1c1b1b"
