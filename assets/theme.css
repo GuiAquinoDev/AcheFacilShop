@@ -5850,7 +5850,7 @@ select option {
   
   .header__cart-icon {
     display: inline-block;
-    margin-right: 22px;
+    margin-right: 16px;
     top: -1px; /* Slight adjustment for the pixel perfect muahah */
   }
 }
@@ -7195,7 +7195,6 @@ select option {
     position: relative;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid var(--border-color);
     background: var(--header-menu-background);
   }
 
