@@ -77,7 +77,15 @@
     "share_image": "",
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "1143683040400472741": {
+        "type": "shopify:\/\/apps\/trustoo-product-ali-reviews\/blocks\/trustoo-review-switch\/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Metal": {
