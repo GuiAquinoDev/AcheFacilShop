@@ -153,7 +153,9 @@
                   {%- endif -%}
 
                   {%- if collection_image.height < max_height_mobile -%}
-                    {%- assign max_width_mobile = collection_image.width | times: collection_image.aspect_ratio | round -%}
+                    {%- assign max_width_mobile = 
+                    
+                    | times: collection_image.aspect_ratio | round -%}
                   {%- else -%}
                     {%- assign max_width_mobile = max_height_mobile | times: collection_image.aspect_ratio | round -%}
                   {%- endif -%}
