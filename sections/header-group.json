@@ -4,6 +4,7 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
         "background": "#1e2d7d",
         "text_color": "#ffffff",
@@ -23,6 +24,11 @@
         "logo": "shopify:\/\/shop_images\/logo-ache-facil-shop-140.png",
         "logo_max_width": 140,
         "mobile_logo_max_width": 100,
+        "mostrar_barra": true,
+        "background1": "#00FF48",
+        "background2": "#01C6FF",
+        "background3": "#FFA000",
+        "background4": "#C100BE",
         "show_locale_selector": true,
         "show_country_selector": false,
         "navigation_menu": "main-menu",
@@ -35,7 +41,9 @@
         "show_condensed_search": true,
         "show_search_filter": true,
         "search_menu": "",
-        "show_search_menu_title": true
+        "show_search_menu_title": true,
+        "show_track_order_header": true,
+        "rastreiopage": "rastrear-pedido"
       }
     }
   },
