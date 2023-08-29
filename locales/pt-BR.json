@@ -55,7 +55,8 @@
       "account": "Minha conta",
       "login": "Entrar / Criar conta",
       "welcome": "Olá {{first_name}}",
-      "cart": "Carrinho"
+      "cart": "Carrinho",
+      "trackshipment": "Rastrear Pedido"
     },
     "navigation": {
       "menu": "Menu",
