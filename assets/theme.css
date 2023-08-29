@@ -5961,9 +5961,11 @@ select option {
   flex: none;
   width: 50px;
   height: 100%;
-  color: var(--secondary-background);
-  background: var(--header-accent-color);
-  border-radius: 0 3px 3px 0;
+  color: var(--header-accent-color-background);
+  background: transparent;
+  border-radius: 0;
+  margin-right: 4px;
+  border-left: 1px solid #80808047;
 }
 
 .search-bar__submit svg {
@@ -7250,6 +7252,14 @@ select option {
 
   .nav-bar__link[aria-expanded=true] .icon--nav-triangle {
     opacity: 1;
+  }
+
+  .nav-bar__link .list--unstyled {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
   }
 }
 
