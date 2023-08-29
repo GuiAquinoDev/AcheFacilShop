@@ -8,7 +8,7 @@
     "theme_support_url": "https://support.maestrooo.com/article/203-contact-us"
   },
   {
-    "name": "Colors",
+    "name": "Cores",
     "settings": [
       {
         "type": "header",
@@ -17,31 +17,31 @@
       {
         "type": "color",
         "id": "heading_color",
-        "label": "Heading",
+        "label": "Titulos",
         "default": "#1c1b1b"
       },
       {
         "type": "color",
         "id": "text_color",
-        "label": "Body text",
+        "label": "Corpo dos textos",
         "default": "#677279"
       },
       {
         "type": "color",
         "id": "accent_color",
-        "label": "Accent",
+        "label": "Acento",
         "default": "#00badb"
       },
       {
         "type": "color",
         "id": "link_color",
-        "label": "Link color",
+        "label": "Cor dos Links",
         "default": "#838383"
       },
       {
         "type": "color",
         "id": "border_color",
-        "label": "Border",
+        "label": "Bordas",
         "default": "#e1e3e4"
       },
       {
@@ -54,24 +54,24 @@
         "type": "color",
         "id": "secondary_background",
         "label": "Secondary background",
-        "info": "For best results, secondary background must not be too far from primary background",
+        "info": "Para melhores resultados, o fundo secundário não deve estar muito longe do fundo primário",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "error_color",
-        "label": "Error messages",
+        "label": "Mensagens de erro",
         "default": "#ff0000"
       },
       {
         "type": "color",
         "id": "success_color",
-        "label": "Success messages",
+        "label": "Mensagens de sucesso",
         "default": "#00aa00"
       },
       {
         "type": "header",
-        "content": "Primary button"
+        "content": "Botão Primário"
       },
       {
         "type": "color",
@@ -82,12 +82,12 @@
       {
         "type": "color",
         "id": "primary_button_text_color",
-        "label": "Text",
+        "label": "Texto",
         "default": "#ffffff"
       },
       {
         "type": "header",
-        "content": "Secondary button"
+        "content": "Botão Secundário"
       },
       {
         "type": "color",
@@ -103,7 +103,7 @@
       },
       {
         "type": "header",
-        "content": "Header"
+        "content": "Cabeçalho"
       },
       {
         "type": "color",
@@ -114,24 +114,24 @@
       {
         "type": "color",
         "id": "header_text_color",
-        "label": "Text",
+        "label": "Texto do Cabeçalho",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "header_light_text_color",
-        "label": "Light text",
+        "label": "Texto secundário",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "header_accent_color",
-        "label": "Accent",
+        "label": "Acento",
         "default": "#00badb"
       },
       {
         "type": "header",
-        "content": "Footer"
+        "content": "Rodapé"
       },
       {
         "type": "color",
@@ -142,47 +142,47 @@
       {
         "type": "color",
         "id": "footer_heading_text_color",
-        "label": "Heading text",
+        "label": "Título do Rodapé",
         "default": "#1e2d7d"
       },
       {
         "type": "color",
         "id": "footer_body_text_color",
-        "label": "Body text",
+        "label": "Cor do texto",
         "default": "#677279"
       },
       {
         "type": "color",
         "id": "footer_accent_color",
-        "label": "Accent",
+        "label": "Acento",
         "default": "#00badb"
       },
       {
         "type": "header",
-        "content": "Product"
+        "content": "Produto"
       },
       {
         "type": "color",
         "id": "product_on_sale_accent",
-        "label": "On sale accent",
+        "label": "Economia - Pagina Inicial",
         "default": "#ee0000"
       },
       {
         "type": "color",
         "id": "product_in_stock_color",
-        "label": "In stock",
+        "label": "Em estoque",
         "default": "#00a500"
       },
       {
         "type": "color",
         "id": "product_low_stock_color",
-        "label": "Low stock",
+        "label": "Estoque baixo",
         "default": "#ee0000"
       },
       {
         "type": "color",
         "id": "product_sold_out_color",
-        "label": "Sold out",
+        "label": "Sem estoque",
         "default": "#8a9297"
       },
       {
@@ -200,7 +200,7 @@
       {
         "type": "color",
         "id": "product_star_color",
-        "label": "Review star",
+        "label": "Estrelas ",
         "default": "#ffbd00"
       }
     ]
