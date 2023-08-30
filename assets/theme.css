@@ -901,8 +901,12 @@ html {
  */
 
 .text--strong, .highlight {
-  color: var(--heading-color);
-  font-weight: var(--text-font-bolder-weight);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: normal;
 }
 
 .text--pull {
@@ -1003,6 +1007,7 @@ html {
 
 .table-wrapper {
   overflow: auto;
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -5651,7 +5656,7 @@ select option {
 }
 
 .header__action-item {
-  padding: 0 9px;
+  padding: 0 4px;
 }
 .header__action-item:last-child {
   padding-right: 4px; /* Last item is the cart, and we use a small padding to accommodate the presence of the cart item count */
@@ -5752,7 +5757,7 @@ select option {
   .header__search-bar-wrapper {
     visibility: hidden;
     position: absolute; /* We move it outside of the document for easier positioning for other elements */
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -9400,6 +9405,16 @@ shopify-payment-terms {
   flex-shrink: 0;
   background: var(--secondary-background);
   white-space: normal;
+  transform: scale(.95);
+  border-radius: 20px!important;
+  box-shadow: 0px 5px 25px -26px black;
+  transition: all 0.5s;
+}
+
+.product-item:hover {
+  margin-top: -6px;
+  margin-bottom: 6px;
+  cursor: pointer;
 }
 
 .product-item::after {
@@ -9409,7 +9424,6 @@ shopify-payment-terms {
   height: 100%;
   left: 0;
   top: 0;
-  box-shadow: 1px 0 var(--border-color), 0 1px var(--border-color);
   z-index: 2; /* needed to overlap the labels (if any) */
   pointer-events: none;
 }
@@ -9417,6 +9431,8 @@ shopify-payment-terms {
 .product-item__image-wrapper {
   display: block;
   margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .product-item__image-wrapper .placeholder-svg {
