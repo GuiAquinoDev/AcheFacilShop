@@ -140,7 +140,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "mais-vendidos",
-        "title": "Featured collection",
+        "title": "Ofertas da semana",
         "products_count": 12,
         "layout": "vertical",
         "stack_products": false,
