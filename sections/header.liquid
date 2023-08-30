@@ -391,6 +391,13 @@
         
               <div id="mobile-account-popover" class="popover">
                 <!-- Popover Content Goes Here -->
+                <div class="popover__inner popover__inner--no-padding">
+                  <div class="popover__linklist">
+                    <a class="popover__link-item" href="{{ routes.account_url }}">{{ 'customer.general.orders' | t }}</a>
+                    <a class="popover__link-item" href="{{ routes.account_addresses_url }}">{{ 'customer.general.addresses' | t }}</a>
+                    <a class="popover__link-item" href="{{ routes.account_logout_url }}" data-no-instant>{{ 'customer.general.logout' | t }}</a>
+                  </div>
+                </div>
                 <span>eae</span>
               </div>
             </div>
