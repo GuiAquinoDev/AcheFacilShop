@@ -8130,7 +8130,7 @@ select option {
 @media screen and (min-width: 641px) {
   .popover {
     width: auto;
-    min-width: 160px;
+    min-width: 320px;
     right: -2px;
     top: calc(100% + 15px);
     left: auto;
