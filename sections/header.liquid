@@ -361,7 +361,6 @@
                 </span>
               {%- endif -%}
 
-<<<<<<< HEAD
 
               <div class="header__action-item-content">
                 <a
@@ -372,16 +371,10 @@
                   aria-expanded="false"
                   data-action="toggle-popover"
                   {% if customer %}data-follow-link="phone"{% endif %}>
-=======
-             
-              <div class="header__action-item-content">
-                <a href="{% if customer %}/account{% else %}/account/login{% endif %}" class="header__action-item-link header__account-icon icon-state hidden-desk" aria-label="{{ 'header.general.account' | t }}" aria-controls="account-popover" aria-expanded="false" data-action="toggle-popover" {% if customer %}data-follow-link="phone"{% endif %}>
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                   <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
                   <span class="icon-state__secondary">{%- render 'icon', icon: 'close' -%}</span>
                 </a>
 
-<<<<<<< HEAD
                 <a
                   href="{% if customer %}/account{% else %}/account/login{% endif %}"
                   class="header__action-item-link hidden-pocket hidden-lap"
@@ -393,11 +386,6 @@
                   id="account-popover"
                   class="popover {% if customer %}popover--logged{% else %}popover--large popover--unlogged{% endif %}"
                   aria-hidden="true">
-=======
-                <a href="{% if customer %}/account{% else %}/account/login{% endif %}" class="header__action-item-link hidden-pocket hidden-lap" aria-controls="account-popover" aria-expanded="false" data-action="toggle-popover">{{ 'header.general.account' | t }} {% render 'icon', icon: 'arrow-bottom' %}</a>
-
-                <div id="account-popover" class="popover {% if customer %}popover--logged{% else %}popover--large popover--unlogged{% endif %}" aria-hidden="true">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                   {%- render 'icon', icon: 'nav-triangle-borderless' -%}
 
                   {%- if customer -%}
@@ -405,14 +393,10 @@
                       <div class="popover__linklist">
                         <a class="popover__link-item" href="{{ routes.account_url }}">{{ 'customer.general.orders' | t }}</a>
                         <a class="popover__link-item" href="{{ routes.account_addresses_url }}">{{ 'customer.general.addresses' | t }}</a>
-<<<<<<< HEAD
                         <a
                           class="popover__link-item"
                           href="{{ routes.account_logout_url }}"
                           data-no-instant>{{ 'customer.general.logout' | t }}</a>
-=======
-                        <a class="popover__link-item" href="{{ routes.account_logout_url }}" data-no-instant>{{ 'customer.general.logout' | t }}</a>
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                       </div>
                     </div>
                   {%- else -%}
@@ -427,21 +411,16 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="email"
                                 id="login-customer[email]"
                                 class="form__field form__field--text"
                                 name="customer[email]"
                                 required="required">
-=======
-                              <input type="email" id="login-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="login-customer[email]" class="form__floating-label">{{ 'customer.login.email' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="password"
                                 id="login-customer[password]"
@@ -449,9 +428,6 @@
                                 name="customer[password]"
                                 required="required"
                                 autocomplete="current-password">
-=======
-                              <input type="password" id="login-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="current-password">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="login-customer[password]" class="form__floating-label">{{ 'customer.login.password' | t }}</label>
                             </div>
 
@@ -459,7 +435,6 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-<<<<<<< HEAD
                             <p>{{ 'customer.login.new_customer' | t }}
                               <button
                                 data-action="show-popover-panel"
@@ -472,10 +447,6 @@
                                 aria-controls="header-recover-panel"
                                 class="link link--accented">{{ 'customer.login.recover_password' | t }}</button>
                             </p>
-=======
-                            <p>{{ 'customer.login.new_customer' | t }} <button data-action="show-popover-panel" aria-controls="header-register-panel" class="link link--accented">{{ 'customer.login.create_your_account' | t }}</button></p>
-                            <p>{{ 'customer.login.lost_password' | t }} <button data-action="show-popover-panel" aria-controls="header-recover-panel" class="link link--accented">{{ 'customer.login.recover_password' | t }}</button></p>
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                           </div>
                         </div>
                       </div>
@@ -490,16 +461,12 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="email"
                                 id="recover-customer[recover_email]"
                                 class="form__field form__field--text"
                                 name="email"
                                 required="required">
-=======
-                              <input type="email" id="recover-customer[recover_email]" class="form__field form__field--text" name="email" required="required">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="recover-customer[recover_email]" class="form__floating-label">{{ 'customer.recover_password.email' | t }}</label>
                             </div>
 
@@ -507,16 +474,12 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-<<<<<<< HEAD
                             <p>{{ 'customer.recover_password.remembered_your_password' | t }}
                               <button
                                 data-action="show-popover-panel"
                                 aria-controls="header-login-panel"
                                 class="link link--accented">{{ 'customer.recover_password.back_to_login' | t }}</button>
                             </p>
-=======
-                            <p>{{ 'customer.recover_password.remembered_your_password' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">{{ 'customer.recover_password.back_to_login' | t }}</button></p>
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                           </div>
                         </div>
                       </div>
@@ -531,49 +494,36 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="text"
                                 id="register-customer[first_name]"
                                 class="form__field form__field--text"
                                 name="customer[first_name]"
                                 required="required">
-=======
-                              <input type="text" id="register-customer[first_name]" class="form__field form__field--text" name="customer[first_name]" required="required">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="register-customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="text"
                                 id="register-customer[last_name]"
                                 class="form__field form__field--text"
                                 name="customer[last_name]"
                                 required="required">
-=======
-                              <input type="text" id="register-customer[last_name]" class="form__field form__field--text" name="customer[last_name]" required="required">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="register-customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="email"
                                 id="register-customer[email]"
                                 class="form__field form__field--text"
                                 name="customer[email]"
                                 required="required">
-=======
-                              <input type="email" id="register-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="register-customer[email]" class="form__floating-label">{{ 'customer.register.email' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-<<<<<<< HEAD
                               <input
                                 type="password"
                                 id="register-customer[password]"
@@ -581,9 +531,6 @@
                                 name="customer[password]"
                                 required="required"
                                 autocomplete="new-password">
-=======
-                              <input type="password" id="register-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="new-password">
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                               <label for="register-customer[password]" class="form__floating-label">{{ 'customer.register.password' | t }}</label>
                             </div>
 
@@ -591,16 +538,12 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-<<<<<<< HEAD
                             <p>{{ 'customer.register.already_have_account' | t }}
                               <button
                                 data-action="show-popover-panel"
                                 aria-controls="header-login-panel"
                                 class="link link--accented">{{ 'customer.register.login' | t }}</button>
                             </p>
-=======
-                            <p>{{ 'customer.register.already_have_account' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">{{ 'customer.register.login' | t }}</button></p>
->>>>>>> 209138c2eb98239c2040a318414bedcca335dac6
                           </div>
                         </div>
                       </div>
@@ -634,8 +577,7 @@
             <a
               class="header__action-item-link header__cart-toggle"
               href="{{ routes.cart_url }}"
-              {% if settings.cart_type != 'page' and template != 'cart' %}aria-controls="mini-cart"aria-expanded="false"data-action="toggle-mini-cart"{% endif %}
-              data-no-instant>
+              {% if settings.cart_type != 'page' and template != 'cart' %}aria-controls="mini-cart"aria-expanded="false"data-action="toggle-mini-cart"{% endif %}data-no-instant>
               <div class="header__action-item-content">
                 <div class="header__cart-icon icon-state" aria-expanded="false">
                   <span class="icon-state__primary">
@@ -768,7 +710,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-{{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section- {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
