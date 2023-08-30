@@ -139,7 +139,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "",
+        "collection": "mais-vendidos",
         "title": "Featured collection",
         "products_count": 12,
         "layout": "vertical",
@@ -147,15 +147,6 @@
         "show_quick_buy": false,
         "link_title": "View all",
         "link_url": ""
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "title": "Newsletter",
-        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
-        "background": "#1e2d7d",
-        "text": "#ffffff"
       }
     },
     "featured-product": {
@@ -199,6 +190,7 @@
         "variant-selector",
         "buy-buttons"
       ],
+      "disabled": true,
       "settings": {
         "product": "",
         "title": "Featured product",
@@ -213,6 +205,7 @@
     },
     "blog-posts": {
       "type": "blog-posts",
+      "disabled": true,
       "settings": {
         "blog": "",
         "blog_posts_count": 3,
@@ -230,7 +223,6 @@
     "slideshow",
     "collection-list",
     "featured-collection",
-    "newsletter",
     "featured-product",
     "blog-posts"
   ]
