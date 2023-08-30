@@ -3871,7 +3871,7 @@ body:not(.is-tabbing) textarea:focus {
 
 @media screen and (min-width: 641px) {
   .product-list {
-    background: var(--secondary-background);
+    background: none;
     border-radius: 3px;
     border: none;
   }
@@ -3928,7 +3928,7 @@ body:not(.is-tabbing) textarea:focus {
   }
 
   .product-list--scrollable .product-item {
-    border: 1px solid var(--border-color);
+    border: none;
   }
 
   .product-list--scrollable .product-item + .product-item {
@@ -3958,7 +3958,7 @@ body:not(.is-tabbing) textarea:focus {
     border: 1px solid var(--border-color);
     z-index: 1;
     pointer-events: none;
-    border-radius: 3px;
+    border: none;
   }
 
   .product-list--scrollable::after {
@@ -4024,7 +4024,7 @@ body:not(.is-tabbing) textarea:focus {
 
 .featured-collection .product-item {
   border: none;
-  border-right: 1px solid var(--border-color);
+  border-right: none;
 }
 
 .featured-collection .product-item::after {
@@ -4073,7 +4073,7 @@ body:not(.is-tabbing) textarea:focus {
     table-layout: fixed;
     width: 100%;
     padding: 6px 6px 6px 0;
-    border-radius: 3px;
+    border-radius: 20px;
   }
 
   .featured-collection__header,
@@ -4103,7 +4103,7 @@ body:not(.is-tabbing) textarea:focus {
     position: absolute;
     height: 100%;
     width: 1px;
-    background: var(--secondary-background);
+    background: none;
     right: 0;
   }
 }
@@ -4234,7 +4234,7 @@ body:not(.is-tabbing) textarea:focus {
 
 @media screen and (min-width: 1280px) {
   .collection-item {
-    width: 16.6666667%;
+    width: 12.5%;
   }
 }
 
@@ -4336,7 +4336,7 @@ body:not(.is-tabbing) textarea:focus {
 
 /* Small exception for the standalone product, that is not within a grid, so it must have borders on all edges */
 .custom-content--product .product-item::after {
-  box-shadow: 1px 0 var(--border-color), -1px 0 var(--border-color), 0 1px var(--border-color), 0 -1px var(--border-color);
+  box-shadow: none;
 }
 /**
  * --------------------------------------------------------------------
@@ -10611,6 +10611,18 @@ shopify-payment-terms {
 
 .section__title {
   margin-bottom: 0;
+}
+
+.section__title::after {
+  content: '';
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent-color);
+  height: 6px;
+  width: 90%;
+  border-radius: 10px;
 }
 
 .section__action-link {
