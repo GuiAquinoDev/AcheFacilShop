@@ -201,7 +201,7 @@
       "list": "Mostrar produtos em uma lista"
     },
     "product": {
-      "from_price_html": "De {{price_min}}",
+      "from_price_html": "A partir de {{price_min}}",
       "add_to_cart": "Adicionar ao carrinho",
       "pre_order": "Pré-compra",
       "quick_view": "Ver mais",
