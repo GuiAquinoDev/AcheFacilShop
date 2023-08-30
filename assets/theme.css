@@ -9429,7 +9429,7 @@ shopify-payment-terms {
 
 .product-item__label-list {
   position: absolute;
-  top: 11px;
+  top: 0px;
   left: -1px;
   z-index: 2;
   font-size: 0;
@@ -9437,8 +9437,10 @@ shopify-payment-terms {
 
 .product-item__label-list > .product-label {
   display: block;
-  margin-bottom: 5px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 12px;
+  background: var(--product-on-sale-accent);
+  margin: 15px;
+  padding: 5px 10px 5px 10px;
 }
 
 .product-item__info {
