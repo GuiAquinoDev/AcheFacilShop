@@ -22,7 +22,7 @@
       "settings": {
         "enable_sticky_header": false,
         "logo": "shopify:\/\/shop_images\/logo-ache-facil-shop-140.png",
-        "logo_max_width": 140,
+        "logo_max_width": 180,
         "mobile_logo_max_width": 100,
         "mostrar_barra": true,
         "background1": "#fffd46",

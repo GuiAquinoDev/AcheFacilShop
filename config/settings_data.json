@@ -14,7 +14,6 @@
     "secondary_button_background": "#702dfa",
     "secondary_button_text_color": "#ffffff",
     "header_background": "#221f2b",
-    "header_menu_background": "#2d2838",
     "header_text_color": "#ffffff",
     "header_light_text_color": "#f7f7f7",
     "header_accent_color": "#fd7c04",
@@ -74,6 +73,7 @@
     "checkout_accent_color": "#00badb",
     "checkout_button_color": "#00badb",
     "checkout_error_color": "#ff0000",
+    "header_menu_background": "#2d2838",
     "search_mode": "product,article",
     "share_image": "",
     "content_for_index": [
