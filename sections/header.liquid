@@ -382,8 +382,8 @@
                   {%- render 'icon', icon: 'arrow-bottom' -%}
                 </a>
 
-                <div id="customer-account-popover" class="popover">
-                  <div class="popover__inner popover__inner--no-padding">
+              <div id="customer-account-popover" class="popover {% if customer %}popover--logged{% else %}popover--large popover--unlogged{% endif %}" aria-hidden="true">
+                <div class="popover__inner popover__inner--no-padding">
                     <div class="popover__linklist">
                       <a class="popover__link-item" href="{{ routes.account_url }}">{{ 'customer.general.orders' | t }}</a>
                       <a class="popover__link-item" href="{{ routes.account_addresses_url }}">{{ 'customer.general.addresses' | t }}</a>
