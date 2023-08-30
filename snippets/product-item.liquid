@@ -25,9 +25,7 @@
           {%- capture savings -%}<span>{{ product.compare_at_price | minus: product.price | money }}</span>{%- endcapture -%}
         {%- endif -%}
 
-        <span class="product-label product-label--on-sale">
-          {%- render 'icon', icon: 'arrow-down' -%}
-          {{ 'collection.product.discount_html' | t: savings: savings }}</span>
+        <span class="product-label product-label--on-sale"><span class="icon-state__primary">{%- render 'icon', icon: 'arrow-down' -%}</span>{{ 'collection.product.discount_html' | t: savings: savings }}</span>
       {%- endif -%}
     {%- endunless -%}
   {%- endcapture -%}
@@ -63,7 +61,7 @@
   <div class="product-item__info">
     <div class="product-item__info-inner">
       {%- capture price_list -%}
-        <div class="product-item__price-list price-list">
+        <div class="product-item__price-list price-list-section">
           {%- if product.price < product.compare_at_price -%}
             {%- if product.price_varies -%}
               {%- if settings.currency_code_enabled -%}
@@ -76,6 +74,7 @@
 
               <span class="price price--highlight">
                 <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                <span class="price-promotion">A partir de</span>
                 {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
               </span>
 
@@ -228,6 +227,10 @@
       {%- if settings.product_price_position == 'after_title' -%}
         {{ price_list }}
       {%- endif -%}
+
+      {% assign divididopor = settings.qty_vezes %}
+      {% assign percentual = settings.porcentagem_de_juros %}
+      <p style="font-size: 14px; margin-bottom: 0;">em até <b>{{ divididopor }}x</b> de <b style="color: var(--product-on-sale-accent)">{{- product.price | divided_by: divididopor | times: 1.0000 | money -}}</b></p>
 
       {%- if settings.show_reviews_badge -%}
         <a class="product-item__reviews-badge link" href="{{ product.url }}#product-reviews">
