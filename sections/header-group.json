@@ -43,7 +43,7 @@
         "search_menu": "",
         "show_search_menu_title": true,
         "show_track_order_header": true,
-        "rastreiopage": "rastrear-pedido"
+        "rastreiopage": "rastreador-de-pedido"
       }
     }
   },
