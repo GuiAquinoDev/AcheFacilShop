@@ -2251,7 +2251,7 @@ body:not(.is-tabbing) textarea:focus {
   display: inline-block;
   padding: 0 30px;
   line-height: 48px;
-  border-radius: 2px;
+  border-radius: 32px;
   text-align: center;
   font-weight: var(--text-font-bolder-weight);
   font-size: var(--base-text-font-size);
@@ -3871,7 +3871,7 @@ body:not(.is-tabbing) textarea:focus {
 
 @media screen and (min-width: 641px) {
   .product-list {
-    background: var(--secondary-background);
+    background: none;
     border-radius: 3px;
     border: none;
   }
@@ -3928,7 +3928,7 @@ body:not(.is-tabbing) textarea:focus {
   }
 
   .product-list--scrollable .product-item {
-    border: 1px solid var(--border-color);
+    border: none;
   }
 
   .product-list--scrollable .product-item + .product-item {
@@ -3958,7 +3958,7 @@ body:not(.is-tabbing) textarea:focus {
     border: 1px solid var(--border-color);
     z-index: 1;
     pointer-events: none;
-    border-radius: 3px;
+    border: none;
   }
 
   .product-list--scrollable::after {
@@ -4024,7 +4024,7 @@ body:not(.is-tabbing) textarea:focus {
 
 .featured-collection .product-item {
   border: none;
-  border-right: 1px solid var(--border-color);
+  border-right: none;
 }
 
 .featured-collection .product-item::after {
@@ -4073,7 +4073,7 @@ body:not(.is-tabbing) textarea:focus {
     table-layout: fixed;
     width: 100%;
     padding: 6px 6px 6px 0;
-    border-radius: 3px;
+    border-radius: 20px;
   }
 
   .featured-collection__header,
@@ -4103,7 +4103,7 @@ body:not(.is-tabbing) textarea:focus {
     position: absolute;
     height: 100%;
     width: 1px;
-    background: var(--secondary-background);
+    background: none;
     right: 0;
   }
 }
@@ -4347,7 +4347,7 @@ body:not(.is-tabbing) textarea:focus {
 .form__field {
   display: block;
   padding: 12px 12px;
-  border-radius: 2px;
+  border-radius: 12px;
   border: 1px solid var(--form-border-color);
   width: 100%;
   line-height: normal;
