@@ -396,20 +396,23 @@
                   <span>oi</span>
                 </div>
 
-                <div id="account-popover"
+                <div
+                  id="account-popover"
                   class="popover"
                   aria-hidden="true">
                   {%- render 'icon', icon: 'nav-triangle-borderless' -%}
 
                   <!-- Popover Content Goes Here -->
                   <div class="popover__panel-list">
-                  {%- comment -%}LOGIN{%- endcomment -%}
+                    {%- comment -%}LOGIN{%- endcomment -%}
                     <div id="header-login-panel" class="popover__panel popover__panel--default is-selected">
                       {%- form 'customer_login', name: 'login', class: 'form form--main', id: 'customer_login', style: login_default_visibility -%}
-                        <header class="popover__header">
-                          <h1 class="popover__title heading">{{ 'customer.login.login' | t }}</h1>
-                          <p class="popover__legend">{{ 'customer.login.description' | t }}</p>
-                        </header>
+                        <div class="popover__inner">
+
+                          <header class="popover__header">
+                            <h1 class="popover__title heading">{{ 'customer.login.login' | t }}</h1>
+                            <p class="popover__legend">{{ 'customer.login.description' | t }}</p>
+                          </header>
 
                           <div class="form__input-wrapper form__input-wrapper--labelled">
                             <input
@@ -449,6 +452,7 @@
                               class="link link--accented">{{ 'customer.login.recover_password' | t }}</button>
                           </p>
                         </div>
+                      </div>
                     </div>
 
                     {%- comment -%}RECOVER{%- endcomment -%}
@@ -710,7 +714,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-      {{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-        {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
