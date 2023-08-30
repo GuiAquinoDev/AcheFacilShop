@@ -362,6 +362,16 @@
                   href="{{ routes.account_url }}"
                   class="header__action-item-link header__account-icon icon-state hidden-desk"
                   aria-label="{{ 'header.general.account' | t }}">
+                    <button
+                      class="header__action-item-link"
+                      data-action="toggle-popover"
+                      aria-controls="desktop-currency-selector"
+                      aria-expanded="false">
+                      <span class="currency-selector__value">{{- localization.country.name }} ({{ localization.country.currency.iso_code }}
+                        {% if localization.country.currency.symbol %}
+                          {{ localization.country.currency.symbol }}{%- endif -%})</span>
+                      {% render 'icon', icon: 'arrow-bottom' %}
+                    </button>
                   <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
                 </a>
 
