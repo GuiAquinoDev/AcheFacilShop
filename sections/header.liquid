@@ -406,8 +406,8 @@
                   <div class="popover__panel-list">
                     {%- comment -%}LOGIN{%- endcomment -%}
                     <div id="header-login-panel" class="popover__panel popover__panel--default is-selected">
-                      {%- form 'customer_login', name: 'login', class: 'form form--main', id: 'customer_login', style: login_default_visibility -%}
-                        <div class="popover__inner">
+                      <div class="popover__inner">
+                        {%- form 'customer_login', name: 'login', class: 'form form--main', id: 'customer_login', style: login_default_visibility -%}
 
                           <header class="popover__header">
                             <h1 class="popover__title heading">{{ 'customer.login.login' | t }}</h1>
@@ -456,7 +456,7 @@
                     </div>
 
                     {%- comment -%}RECOVER{%- endcomment -%}
-                    <div id="header-recover-panel"  class="popover__panel popover__panel--default is-selected">
+                    <div id="header-recover-panel" class="popover__panel popover__panel--default is-selected">
                       <div class="popover__inner">
                         {%- form 'recover_customer_password', name: 'recover', class: 'form' -%}
                           <header class="popover__header">
@@ -714,7 +714,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-        {{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-         {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
