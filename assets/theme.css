@@ -4347,7 +4347,7 @@ body:not(.is-tabbing) textarea:focus {
 .form__field {
   display: block;
   padding: 12px 12px;
-  border-radius: 32px;
+  border-radius: 12px;
   border: 1px solid var(--form-border-color);
   width: 100%;
   line-height: normal;
