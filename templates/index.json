@@ -145,8 +145,8 @@
         "layout": "vertical",
         "stack_products": false,
         "show_quick_buy": false,
-        "link_title": "View all",
-        "link_url": ""
+        "link_title": "Ver Todos",
+        "link_url": "shopify:\/\/collections\/ofertas-da-semana"
       }
     },
     "featured-product": {
