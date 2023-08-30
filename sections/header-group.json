@@ -22,8 +22,8 @@
       "settings": {
         "enable_sticky_header": false,
         "logo": "shopify:\/\/shop_images\/logo-ache-facil-shop-140.png",
-        "logo_max_width": 140,
-        "mobile_logo_max_width": 100,
+        "logo_max_width": 180,
+        "mobile_logo_max_width": 80,
         "mostrar_barra": true,
         "background1": "#fffd46",
         "background2": "#ff274a",
@@ -36,14 +36,14 @@
         "desktop_navigation_layout": "inline",
         "desktop_navigation_open_trigger": "hover",
         "show_navigation_social_media": true,
-        "navigation_phone_number": "Call us 000-000-0000",
-        "navigation_email": "info@yourwebsite.com",
-        "show_condensed_search": true,
+        "navigation_phone_number": "(12) 99166-6818",
+        "navigation_email": "atendimento@achefacilshop.com.br",
+        "show_condensed_search": false,
         "show_search_filter": true,
         "search_menu": "",
         "show_search_menu_title": true,
         "show_track_order_header": true,
-        "rastreiopage": "rastrear-pedido"
+        "rastreiopage": "rastreador-de-pedido"
       }
     }
   },

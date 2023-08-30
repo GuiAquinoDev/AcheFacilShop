@@ -209,7 +209,7 @@
       "sold_out": "Esgotado",
       "in_stock": "Em estoque",
       "oversell_stock": "Em reabastecimento",
-      "discount_html": "Economize {{savings}}",
+      "discount_html": "{{savings}}",
       "low_stock_with_quantity_count": {
         "one": "Apenas {{count}} unidade restante",
         "other": "Apenas {{count}} unidades restantes"
