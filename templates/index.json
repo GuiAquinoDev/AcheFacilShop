@@ -87,36 +87,41 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "link": ""
+            "collection": "casa-e-cozinha",
+            "image": "shopify:\/\/shop_images\/Categorias_1_Casa_e_Cozinha_cacf2fb6-2dfd-43a3-a455-dc5152325ad3.jpg",
+            "link": "shopify:\/\/collections\/casa-e-cozinha"
           }
         },
         "collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "link": ""
+            "collection": "feminino",
+            "image": "shopify:\/\/shop_images\/Categorias_2_Feminino.jpg",
+            "link": "shopify:\/\/collections\/feminino"
           }
         },
         "collection-3": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "link": ""
+            "collection": "eletronicos",
+            "image": "shopify:\/\/shop_images\/Categorias_3_Eletronicos_a618b9f3-ebd5-40aa-a8a5-f3fa2d3e0c60.jpg",
+            "link": "shopify:\/\/collections\/eletronicos"
           }
         },
         "collection-4": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "link": ""
+            "collection": "pets",
+            "image": "shopify:\/\/shop_images\/categoria-pet.jpg",
+            "link": "shopify:\/\/collections\/pets"
           }
         },
         "collection-5": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "link": ""
+            "collection": "fitness-1",
+            "image": "shopify:\/\/shop_images\/Categorias_5_Fitness_6a0b54da-3192-4de9-a9e8-f12be47d028a.jpg",
+            "link": "shopify:\/\/collections\/fitness-1"
           }
         },
         "collection-6": {
@@ -136,11 +141,11 @@
         "collection-6"
       ],
       "settings": {
-        "title": "Our collections",
+        "title": "",
         "link_title": "View all",
         "link": "shopify:\/\/collections",
         "round_images": true,
-        "show_collection_title": true
+        "show_collection_title": false
       }
     },
     "newsletter": {
