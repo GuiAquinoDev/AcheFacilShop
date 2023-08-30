@@ -357,7 +357,7 @@
                 <span class="header__action-item-title hidden-pocket hidden-lap">{{ 'header.general.login' | t }}</span>
               {%- endif -%}
 
-              <div class="header__action-item-content">
+              {% comment %} <div class="header__action-item-content">
                 <a
                   href=""
                   class="header__action-item-link header__account-icon icon-state hidden-desk"
@@ -389,7 +389,53 @@
                   {% render 'icon', icon: 'arrow-bottom' %}
                 </button>
                 </a>
-              </div>
+              </div> {% endcomment %}
+
+              <div class="header__action-item-content">
+  {%- if account_selector -%}
+    <div class="header__action-item header__action-item--account hidden-desk">
+      <span class="header__action-item-title">{{ 'header.general.account' | t }}</span>
+
+      <div class="header__action-item-content">
+        <button
+          class="header__action-item-link"
+          data-action="toggle-popover"
+          aria-controls="desktop-account-selector"
+          aria-expanded="false">
+          {{- 'header.general.account' | t -}}
+          {% render 'icon', icon: 'arrow-bottom' %}
+        </button>
+
+        <div
+          id="desktop-account-selector"
+          class="popover popover--account"
+          aria-hidden="true">
+          {%- render 'icon', icon: 'nav-triangle-borderless' -%}
+
+          <div class="popover__inner popover__inner--no-padding popover__inner--restrict">
+            <!-- Content for account popover -->
+            <!-- You can add the necessary content here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- else -%}
+    <a
+      href=""
+      class="header__action-item-link header__account-icon icon-state hidden-desk"
+      aria-label="{{ 'header.general.account' | t }}">
+      <button
+        class="header__action-item-link"
+        data-action="toggle-popover"
+        aria-controls="desktop-account-selector"
+        aria-expanded="false">
+        {{- 'header.general.account' | t -}}
+        {% render 'icon', icon: 'arrow-bottom' %}
+      </button>
+      <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
+    </a>
+  {%- endif -%}
+</div>
 
 
             </div>
