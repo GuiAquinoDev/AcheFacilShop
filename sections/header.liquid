@@ -447,15 +447,8 @@
 
 
                         <div class="popover__secondary-action">
-                          <p>{{ 'customer.login.new_customer' | t }}
-                            <a href="{{ routes.account_register_url }}" class="link link--accented">{{ 'customer.login.create_your_account' | t }}</a>
-                          </p>
-                          <p>{{ 'customer.login.lost_password' | t }}
-                            <button
-                              type="button"
-                              data-action="toggle-login-form"
-                              class="link link--accented">{{ 'customer.login.recover_password' | t }}</button>
-                          </p>
+                          <p>{{ 'customer.login.new_customer' | t }} <button data-action="show-popover-panel" aria-controls="header-register-panel" class="link link--accented">{{ 'customer.login.create_your_account' | t }}</button></p>
+                          <p>{{ 'customer.login.lost_password' | t }} <button data-action="show-popover-panel" aria-controls="header-recover-panel" class="link link--accented">{{ 'customer.login.recover_password' | t }}</button></p>
                         </div>
                       </div>
                     </div>
