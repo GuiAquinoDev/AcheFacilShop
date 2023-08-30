@@ -9397,6 +9397,16 @@ shopify-payment-terms {
   flex-shrink: 0;
   background: var(--secondary-background);
   white-space: normal;
+transform: scale(.95);
+border-radius: calc(var(--border-radius-theme) + 8px)!important;
+box-shadow: 0px 5px 25px -26px black;
+transition: all 0.5s;
+}
+
+.product-item:hover {
+margin-top: -6px;
+margin-bottom: 6px;
+cursor: pointer;
 }
 
 .product-item::after {
@@ -9552,6 +9562,7 @@ shopify-payment-terms {
   .product-item--vertical .price:not(.price--compare),
   .product-item--list .price:not(.price--compare) {
     font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 20px));
+    font-weight: 700;
   }
 }
 
