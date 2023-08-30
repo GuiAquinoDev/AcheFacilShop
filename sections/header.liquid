@@ -408,7 +408,6 @@
                     <div id="header-login-panel" class="popover__panel popover__panel--default is-selected">
                       <div class="popover__inner">
                         {%- form 'customer_login', name: 'login', class: 'form', id: 'header_customer_login' -%}
-                          {{routes.account_url}}
                           <header class="popover__header">
                             <h1 class="popover__title heading">{{ 'customer.login.login' | t }}</h1>
                             <p class="popover__legend">{{ 'customer.login.description' | t }}</p>
@@ -462,7 +461,7 @@
                     </div>
 
                     {%- comment -%}RECOVER{%- endcomment -%}
-                    <div id="header-recover-panel" class="popover__panel popover__panel--default is-selected">
+                    <div id="header-recover-panel" class="popover__panel popover__panel--sliding">
                       <div class="popover__inner">
                         {%- form 'recover_customer_password', name: 'recover', class: 'form' -%}
                           <header class="popover__header">
