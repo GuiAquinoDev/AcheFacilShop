@@ -414,41 +414,47 @@
                             <p class="popover__legend">{{ 'customer.login.description' | t }}</p>
                           </header>
 
+                          {%- if form.errors -%}
+                            <p class="alert alert--error" id="login-form-error">{{ form.errors.messages['form'] }}</p>
+                          {%- endif -%}
+
                           <div class="form__input-wrapper form__input-wrapper--labelled">
                             <input
                               type="email"
-                              id="login-customer[email]"
+                              id="customer[email]"
                               class="form__field form__field--text"
                               name="customer[email]"
-                              required="required">
-                            <label for="login-customer[email]" class="form__floating-label">{{ 'customer.login.email' | t }}</label>
+                              autocomplete="email"
+                              required="required"
+                              {% if form.errors %}aria-invalid="true"aria-describedby="login-form-error"{% endif %}>
+                            <label for="customer[email]" class="form__floating-label">{{ 'customer.login.email' | t }}</label>
                           </div>
+
 
                           <div class="form__input-wrapper form__input-wrapper--labelled">
                             <input
                               type="password"
-                              id="login-customer[password]"
+                              id="customer[password]"
                               class="form__field form__field--text"
                               name="customer[password]"
                               required="required"
-                              autocomplete="current-password">
-                            <label for="login-customer[password]" class="form__floating-label">{{ 'customer.login.password' | t }}</label>
+                              autocomplete="current-password"
+                              {% if form.errors %}aria-invalid="true"aria-describedby="login-form-error"{% endif %}>
+                            <label for="customer[password]" class="form__floating-label">{{ 'customer.login.password' | t }}</label>
                           </div>
 
                           <button type="submit" class="form__submit button button--primary button--full">{{ 'customer.login.submit' | t }}</button>
                         {%- endform -%}
 
+
                         <div class="popover__secondary-action">
                           <p>{{ 'customer.login.new_customer' | t }}
-                            <button
-                              data-action="show-popover-panel"
-                              aria-controls="header-register-panel"
-                              class="link link--accented">{{ 'customer.login.create_your_account' | t }}</button>
+                            <a href="{{ routes.account_register_url }}" class="link link--accented">{{ 'customer.login.create_your_account' | t }}</a>
                           </p>
                           <p>{{ 'customer.login.lost_password' | t }}
                             <button
-                              data-action="show-popover-panel"
-                              aria-controls="header-recover-panel"
+                              type="button"
+                              data-action="toggle-login-form"
                               class="link link--accented">{{ 'customer.login.recover_password' | t }}</button>
                           </p>
                         </div>
@@ -714,7 +720,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-         {{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-            {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
