@@ -396,10 +396,14 @@
                   <span>oi</span>
                 </div>
 
-                <div id="account-popover" class="popover">
+                <div id="account-popover"
+                  class="popover"
+                  aria-hidden="true">
+                  {%- render 'icon', icon: 'nav-triangle-borderless' -%}
+
                   <!-- Popover Content Goes Here -->
-                  <div class="popover__panel-list">
-                    {%- comment -%}LOGIN{%- endcomment -%}
+                  <div class="popover__inner popover__inner--no-padding popover__inner--restrict">
+                  {%- comment -%}LOGIN{%- endcomment -%}
                     <div id="header-login-panel" class="popover__panel popover__panel--default is-selected">
                       <div class="popover__inner">
                         {%- form 'customer_login', name: 'login', class: 'form', id: 'header_customer_login' -%}
@@ -708,7 +712,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-     {{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-      {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
