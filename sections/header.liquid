@@ -349,98 +349,47 @@
             </div>
           {%- endif -%}
 
-          {%- if shop.customer_accounts_enabled -%}
-            <div class="header__action-item header__action-item--account">
-              {%- if customer -%}
-                <span class="header__action-item-title hidden-pocket hidden-lap">{{ 'header.general.welcome' | t: first_name: customer.first_name | truncate: 20 }}</span>
-              {%- else -%}
-                <span class="header__action-item-title hidden-pocket hidden-lap">{{ 'header.general.login' | t }}</span>
-              {%- endif -%}
-
-              {% comment %} <div class="header__action-item-content">
-                <a
-                  href=""
-                  class="header__action-item-link header__account-icon icon-state hidden-desk"
-                  aria-label="{{ 'header.general.account' | t }}">
-                    <button
-                      class="header__action-item-link"
-                      data-action="toggle-popover"
-                      aria-controls="desktop-currency-selector"
-                      aria-expanded="false">
-                      <span class="currency-selector__value">{{- localization.country.name }} ({{ localization.country.currency.iso_code }}
-                        {% if localization.country.currency.symbol %}
-                          {{ localization.country.currency.symbol }}{%- endif -%})</span>
-                      {% render 'icon', icon: 'arrow-bottom' %}
-                    </button>
-                  <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
-                </a>
-
-                <a href="" class="header__action-item-link hidden-pocket hidden-lap">
-                  {{- 'header.general.account' | t -}}
-                  {%- render 'icon', icon: 'arrow-bottom' -%}
-                  <button
-                  class="header__action-item-link"
-                  data-action="toggle-popover"
-                  aria-controls="desktop-currency-selector"
-                  aria-expanded="false">
-                  <span class="currency-selector__value">{{- localization.country.name }} ({{ localization.country.currency.iso_code }}
-                    {% if localization.country.currency.symbol %}
-                      {{ localization.country.currency.symbol }}{%- endif -%})</span>
-                  {% render 'icon', icon: 'arrow-bottom' %}
-                </button>
-                </a>
-              </div> {% endcomment %}
-
-              <div class="header__action-item-content">
-  {%- if account_selector -%}
-    <div class="header__action-item header__action-item--account hidden-desk">
-      <span class="header__action-item-title">{{ 'header.general.account' | t }}</span>
-
-      <div class="header__action-item-content">
-        <button
-          class="header__action-item-link"
-          data-action="toggle-popover"
-          aria-controls="desktop-account-selector"
-          aria-expanded="false">
-          {{- 'header.general.account' | t -}}
-          {% render 'icon', icon: 'arrow-bottom' %}
-        </button>
-
-        <div
-          id="desktop-account-selector"
-          class="popover popover--account"
-          aria-hidden="true">
-          {%- render 'icon', icon: 'nav-triangle-borderless' -%}
-
-          <div class="popover__inner popover__inner--no-padding popover__inner--restrict">
-            <!-- Content for account popover -->
-            <!-- You can add the necessary content here -->
-            <span>oie</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  {%- else -%}
-    <a
-      href=""
-      class="header__action-item-link header__account-icon icon-state hidden-desk"
-      aria-label="{{ 'header.general.account' | t }}">
-      <button
-        class="header__action-item-link"
-        data-action="toggle-popover"
-        aria-controls="desktop-account-selector"
-        aria-expanded="false">
-        {{- 'header.general.account' | t -}}
-        {% render 'icon', icon: 'arrow-bottom' %}
-      </button>
-      <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
-    </a>
-  {%- endif -%}
-</div>
-
-
+          {% if shop.customer_accounts_enabled %}
+          <div class="header__action-item header__action-item--account">
+            {%- if customer -%}
+              <span class="header__action-item-title hidden-pocket hidden-lap">
+                {{ 'header.general.welcome' | t: first_name: customer.first_name | truncate: 20 }}
+              </span>
+            {%- else -%}
+              <span class="header__action-item-title hidden-pocket hidden-lap">
+                {{ 'header.general.login' | t }}
+              </span>
+            {%- endif -%}
+        
+            <div class="header__action-item-content">
+              <a href="{{ routes.account_url }}" class="header__action-item-link header__account-icon icon-state hidden-desk"
+                 aria-label="{{ 'header.general.account' | t }}"
+                 data-action="toggle-popover"
+                 aria-controls="desktop-account-popover"
+                 aria-expanded="false">
+                <span class="icon-state__primary">{%- render 'icon', icon: 'account' -%}</span>
+              </a>
+        
+              <a href="{{ routes.account_url }}" class="header__action-item-link hidden-pocket hidden-lap"
+                 data-action="toggle-popover"
+                 aria-controls="mobile-account-popover"
+                 aria-expanded="false">
+                {{- 'header.general.account' | t -}}
+                {%- render 'icon', icon: 'arrow-bottom' -%}
+              </a>
+        
+              <div id="desktop-account-popover" class="popover">
+                <!-- Popover Content Goes Here -->
+                <span>oi</span>
+              </div>
+        
+              <div id="mobile-account-popover" class="popover">
+                <!-- Popover Content Goes Here -->
+              </div>
             </div>
-          {%- endif -%}
+          </div>
+        {% endif %}
+        
 
           {% if section.settings.show_track_order_header %}
             <div class="header__action-item">
@@ -598,7 +547,7 @@
   width: 100%;
 }
 </style><script>
-document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-  {{ section.id }}').clientHeight + 'px');
+document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-   {{ section.id }}').clientHeight + 'px');
 </script>{% schema %}
 {
   "name": "Header",
@@ -607,7 +556,7 @@ document.documentElement.style.setProperty('--header-height', document.getElemen
     {
       "type": "checkbox",
       "id": "enable_sticky_header",
-      "label": "Ativar Cabeçalho Fixo",
+      "label": "Ativar Cabeçalho",
       "default": true
     },
     {
