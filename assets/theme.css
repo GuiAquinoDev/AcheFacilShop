@@ -9032,6 +9032,8 @@ shopify-payment-terms {
 .price--highlight {
   margin-right: 0.3em;
   color: #432e52;
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .price--compare {
@@ -9524,7 +9526,6 @@ cursor: pointer;
 
 .product-item .price {
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 18px));
-  font-weight: 700;
 }
 
 .product-item .price--compare {
