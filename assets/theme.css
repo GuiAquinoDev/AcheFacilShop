@@ -4460,7 +4460,7 @@ body:not(.is-tabbing) textarea:focus {
 .form__submit--tight {
   margin-top: 12px;
   width: 100%;
-  background: none;
+  background: transparent;
   border: 2px solid var(--footer-body-text-color);
   color: var(--footer-body-text-color);
 }
