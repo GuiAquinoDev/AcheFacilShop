@@ -2251,7 +2251,7 @@ body:not(.is-tabbing) textarea:focus {
   display: inline-block;
   padding: 0 30px;
   line-height: 48px;
-  border-radius: 32px;
+  border-radius: 12px;
   text-align: center;
   font-weight: var(--text-font-bolder-weight);
   font-size: var(--base-text-font-size);
@@ -9843,7 +9843,7 @@ cursor: pointer;
   display: flex;
   min-height: 240px;
   padding: 20px 24px;
-  border-radius: 3px;
+  border-radius: 20px;
   overflow: hidden;
 }
 

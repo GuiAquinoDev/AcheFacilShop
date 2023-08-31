@@ -37,7 +37,7 @@
 
               <style>
                 #block-{{ block.id }} .promo-block {
-                  background-color: {{ block.settings.background }};
+                  background-image: linear-gradient(150deg, {{ block.settings.background }}, {{ block.settings.second_background }});
                   color: {{ block.settings.text_color }}
                 }
 
@@ -170,6 +170,12 @@
         },
         {
           "type": "color",
+          "id": "second_background",
+          "label": "Background 2",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
           "id": "text_color",
           "label": "Text",
           "default": "#ffffff"
@@ -270,6 +276,7 @@
           "type": "item",
           "settings": {
             "background": "#6f42ef",
+            "second_background": "#ffffff",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#6f42ef"
