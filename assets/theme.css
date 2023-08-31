@@ -901,8 +901,12 @@ html {
  */
 
 .text--strong, .highlight {
-  color: var(--heading-color);
-  font-weight: var(--text-font-bolder-weight);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: normal;
 }
 
 .text--pull {
@@ -11158,6 +11162,8 @@ cursor: pointer;
 
 .text-with-icons__title {
   margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--accent-color);
 }
 
 .text-with-icons__icon-wrapper {
