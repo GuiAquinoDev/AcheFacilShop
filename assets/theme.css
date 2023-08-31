@@ -9524,7 +9524,7 @@ cursor: pointer;
 
 .product-item .price {
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 18px));
-  font-size: 700;
+  font-weight: 700;
 }
 
 .product-item .price--compare {
