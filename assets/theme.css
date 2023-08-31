@@ -5295,6 +5295,10 @@ select option {
   margin-top: 45px;
 }
 
+.footer__aside-item--payment {
+  text-align: center;
+}
+
 .footer__aside-item-cnpj {
   margin: 0;
 }
