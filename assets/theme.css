@@ -9524,6 +9524,7 @@ cursor: pointer;
 
 .product-item .price {
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 18px));
+  font-size: 700;
 }
 
 .product-item .price--compare {
@@ -9582,7 +9583,6 @@ cursor: pointer;
   .product-item--vertical .price:not(.price--compare),
   .product-item--list .price:not(.price--compare) {
     font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 20px));
-    font-weight: 700;
   }
 }
 
