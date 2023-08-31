@@ -1,3 +1,5 @@
+
+<div class="container-fluid color-line"></div>
 <footer class="footer" data-section-id="{{ section.id }}" data-section-type="footer" role="contentinfo">
   <div class="container">
     <div class="footer__wrapper">
@@ -7,7 +9,17 @@
             {%- case block.type -%}
               {%- when 'text' -%}
                 <div class="footer__block-item footer__block-item--text" {{ block.shopify_attributes }}>
-                  <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
+                  
+                {%- if block.settings.mostrar_logotipo -%}
+                <img
+                  class="img-footer-logotype"
+                  style="max-width: {{ block.settings.logo_max_width_footer }}px; margin-bottom: 24px;"
+                  width="{{ block.settings.logotipo_footer.width }}"
+                  height="{{ block.settings.logotipo_footer.height }}"
+                  src="{{ block.settings.logotipo_footer | img_url: image_size, scale: 5 }}"
+                  alt="{{ block.settings.logotipo_footer.alt | default: shop.name | escape }}">
+                {%- endif -%}
+                <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
                     <span>{{ block.settings.title | escape }}</span>
                     <span class="plus-button"></span>
                   </button>
@@ -26,7 +38,7 @@
 
                 {%- unless menu.empty? -%}
                   <div class="footer__block-item footer__block-item--links" {{ block.shopify_attributes }}>
-                    <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
+                    <button class="footer__title heading h6" disabled aria-expanded="true" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
                       <span>{{ menu.title }}</span>
                       <span class="plus-button"></span>
                     </button>
@@ -184,9 +196,6 @@
             <p class="footer__aside-title">{{ 'footer.general.we_accept' | t }}</p>
 
             <div class="payment-list">
-              {% for type in shop.enabled_payment_types %}
-                {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
-              {% endfor %}
             </div>
           </div>
         {%- endif -%}
