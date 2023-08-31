@@ -1,7 +1,7 @@
 {%- comment -%}Color labels used to detect what is a color swatch{%- endcomment -%}
 {%- assign color_label = 'color,colour,couleur,cor,colore,farbe,색,色,カラー,färg,farve,szín,barva' | split: ',' -%}
 
-<div class="product-item {% if horizontal %}product-item--horizontal{% elsif list %}product-item--list{% else %}product-item--vertical{% endif %} {% if complementary_products %}product-item--complementary{% endif %} {% if section.id == 'blog-sidebar' %}product-item--compact{% endif %} {{ grid_classes }}">
+  <div class="product-item {% if horizontal %}product-item--horizontal{% elsif list %}product-item--list{% else %}product-item--vertical{% endif %} {% if complementary_products %}product-item--complementary{% endif %} {% if section.id == 'blog-sidebar' %}product-item--compact{% endif %} {{ grid_classes }}">
   {%- capture product_labels -%}
     {%- unless hide_labels -%}
       {%- for tag in product.tags -%}
@@ -22,10 +22,14 @@
         {%- if settings.discount_mode == 'percentage' -%}
           {%- assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%' -%}
         {%- else -%}
-          {%- capture savings -%}<span>{{ product.compare_at_price | minus: product.price | money }}</span>{%- endcapture -%}
+          {%- capture savings -%}
+            <span>{{ product.compare_at_price | minus: product.price | money }}</span>
+          {%- endcapture -%}
         {%- endif -%}
 
-        <span class="product-label product-label--on-sale"><span class="icon-state__primary">{%- render 'icon', icon: 'arrow-down' -%}</span>{{ 'collection.product.discount_html' | t: savings: savings }}</span>
+        <span class="product-label product-label--on-sale">
+          <span class="icon-state__primary">{%- render 'icon', icon: 'arrow-down' -%}</span>
+          {{ 'collection.product.discount_html' | t: savings: savings }}</span>
       {%- endif -%}
     {%- endunless -%}
   {%- endcapture -%}
@@ -65,28 +69,35 @@
           {%- if product.price < product.compare_at_price -%}
             {%- if product.price_varies -%}
               {%- if settings.currency_code_enabled -%}
-                {%- capture price_min -%}{{ product.price_min | money_with_currency }}{%- endcapture -%}
-                {%- capture price_max -%}{{ product.price_max | money_with_currency }}{%- endcapture -%}
+                {%- capture price_min -%}
+                  {{ product.price_min | money_with_currency }}{%- endcapture -%}
+                {%- capture price_max -%}
+                  {{ product.price_max | money_with_currency }}{%- endcapture -%}
               {%- else -%}
-                {%- capture price_min -%}{{ product.price_min | money }}{%- endcapture -%}
-                {%- capture price_max -%}{{ product.price_max | money }}{%- endcapture -%}
+                {%- capture price_min -%}
+                  {{ product.price_min | money }}{%- endcapture -%}
+                {%- capture price_max -%}
+                  {{ product.price_max | money }}{%- endcapture -%}
               {%- endif -%}
 
-              <span class="price price--highlight">
-                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-                <span class="price-promotion">A partir de</span>
-                {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
-              </span>
+              <span class="price-promotion">A partir de</span>
+              <div>
+                <span class="price price--highlight">
+                  <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                  {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
+                </span>
 
-              <span class="price price--compare">
-                <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
 
-                {%- if settings.currency_code_enabled -%}
-                  {{- product.compare_at_price_min | money_with_currency -}}
-                {%- else -%}
-                  {{- product.compare_at_price_min | money -}}
-                {%- endif -%}
-              </span>
+                <span class="price price--compare">
+                  <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+                  {%- if settings.currency_code_enabled -%}
+                    {{- product.compare_at_price_min | money_with_currency -}}
+                  {%- else -%}
+                    {{- product.compare_at_price_min | money -}}
+                  {%- endif -%}
+                </span>
+              </div>
             {%- else -%}
               <span class="price price--highlight">
                 <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
@@ -109,11 +120,15 @@
             {%- endif -%}
           {%- elsif product.price_varies -%}
             {%- if settings.currency_code_enabled -%}
-              {%- capture price_min -%}{{ product.price_min | money_with_currency }}{%- endcapture -%}
-              {%- capture price_max -%}{{ product.price_max | money_with_currency }}{%- endcapture -%}
+              {%- capture price_min -%}
+                {{ product.price_min | money_with_currency }}{%- endcapture -%}
+              {%- capture price_max -%}
+                {{ product.price_max | money_with_currency }}{%- endcapture -%}
             {%- else -%}
-              {%- capture price_min -%}{{ product.price_min | money }}{%- endcapture -%}
-              {%- capture price_max -%}{{ product.price_max | money }}{%- endcapture -%}
+              {%- capture price_min -%}
+                {{ product.price_min | money }}{%- endcapture -%}
+              {%- capture price_max -%}
+                {{ product.price_max | money }}{%- endcapture -%}
             {%- endif -%}
 
             <span class="price">
@@ -136,7 +151,8 @@
           <div class="product-item__price-info">
             <div class="unit-price-measurement">
               <span class="unit-price-measurement__price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
-              <span class="unit-price-measurement__separator">/ </span>
+              <span class="unit-price-measurement__separator">/
+              </span>
 
               {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
                 <span class="unit-price-measurement__reference-value">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
@@ -177,7 +193,8 @@
 
       {%- if settings.show_color_swatch and template != 'blog' -%}
         {%- capture color_swatch -%}
-          {%- capture color_name -%}{{ section.id }}-{{ product.id }}{%- endcapture -%}
+          {%- capture color_name -%}
+            {{ section.id }}-{{ product.id }}{%- endcapture -%}
 
           {%- for option in product.options_with_values -%}
             {%- assign downcased_option = option.name | downcase -%}
@@ -190,7 +207,8 @@
 
               {%- for value in option.values -%}
                 {%- assign downcased_value = value | downcase -%}
-                {%- capture color_id -%}{{ color_name }}-{{ forloop.index }}{%- endcapture -%}
+                {%- capture color_id -%}
+                  {{ color_name }}-{{ forloop.index }}{%- endcapture -%}
 
                 {%- for variant in product.variants -%}
                   {%- if variant[variant_option] == value -%}
@@ -204,8 +222,21 @@
                     {%- assign image_url = variant_for_value.featured_media | image_url: width: 800 -%}
                   {%- endif -%}
 
-                  <input class="color-swatch__radio" type="radio" name="{{ color_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if value_to_match == value %}checked="checked"{% endif %} data-variant-url="{{ variant_for_value.url }}" {% if variant_for_value.featured_media %}data-media-id="{{ variant_for_value.featured_media.id }}" data-image-url="{{ image_url }}" data-image-aspect-ratio="{{ variant_for_value.featured_media.preview_image.aspect_ratio }}"{% endif %} aria-label="{{ value | escape }}">
-                  <label class="color-swatch__item" for="{{ color_id }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: downcased_value %}" title="{{ value | escape }}">
+                  <input
+                    class="color-swatch__radio"
+                    type="radio"
+                    name="{{ color_name }}"
+                    id="{{ color_id }}"
+                    value="{{ value | escape }}"
+                    {% if value_to_match == value %}checked="checked"{% endif %}
+                    data-variant-url="{{ variant_for_value.url }}"
+                    {% if variant_for_value.featured_media %}data-media-id="{{ variant_for_value.featured_media.id }}"data-image-url="{{ image_url }}"data-image-aspect-ratio="{{ variant_for_value.featured_media.preview_image.aspect_ratio }}"{% endif %}
+                    aria-label="{{ value | escape }}">
+                  <label
+                    class="color-swatch__item"
+                    for="{{ color_id }}"
+                    style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: downcased_value %}"
+                    title="{{ value | escape }}">
                     <span class="visually-hidden">{{ value }}</span>
                   </label>
                   <a href="{{ product.url }}" class="color-swatch__item-link">+{{ option.values.size | minus: forloop.index0 }}</a>
@@ -230,7 +261,11 @@
 
       {% assign divididopor = settings.qty_vezes %}
       {% assign percentual = settings.porcentagem_de_juros %}
-      <p style="font-size: 14px; margin-bottom: 0;">em até <b>12x</b> de <b style="color: var(--product-on-sale-accent)">{{- product.price | divided_by: 12 | times: 1.0000 | money -}}</b></p>
+      <p style="font-size: 14px; margin-bottom: 0;">em até
+        <b>12x</b>
+        de
+        <b style="color: var(--product-on-sale-accent)">{{- product.price | divided_by: 12 | times: 1.0000 | money -}}</b>
+      </p>
 
       {%- if settings.show_reviews_badge -%}
         <a class="product-item__reviews-badge link" href="{{ product.url }}#product-reviews">
@@ -242,10 +277,10 @@
         {%- if product.available -%}
           {%- assign should_calculate_inventory = true -%}
 
-          {%- for variant in product.variants -%}
+            {%- for variant in product.variants -%}
             {%- comment -%}
-              If we have one variant that is set to "continue" or that do not have any inventory management, then we skip the calculation of inventory as this
-              means at least one of the variant is always purchasable
+            If we have one variant that is set to "continue" or that do not have any inventory management, then we skip the calculation of inventory as this
+            means at least one of the variant is always purchasable
             {%- endcomment -%}
 
             {%- if variant.inventory_policy == 'continue' or variant.inventory_management == null -%}
@@ -299,8 +334,14 @@
       {%- else -%}
         {%- capture quick_buy_form -%}
           {%- form 'product', product, id: form_id, class: product_form_classes -%}
-            <input type="hidden" name="quantity" value="1">
-            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <input
+              type="hidden"
+              name="quantity"
+              value="1">
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
 
             {%- if section.settings.show_quick_buy == 'list_grid' or show_add_to_cart -%}
               {%- if complementary_products -%}
@@ -314,7 +355,10 @@
 
             {%- if product.available -%}
               {%- if product.variants.size == 1 -%}
-                <button type="submit" class="{{ quick_buy_classes }}" data-action="add-to-cart">
+                <button
+                  type="submit"
+                  class="{{ quick_buy_classes }}"
+                  data-action="add-to-cart">
                   {%- if product.template_suffix == 'pre-order' -%}
                     {{- 'collection.product.pre_order' | t -}}
                   {%- else -%}
@@ -334,7 +378,13 @@
               {%- assign quick_view_classes = 'product-item__action-button product-item__action-button--list-view-only button button--small button--ternary hidden-phone' -%}
             {%- endif -%}
 
-            <button type="button" class="{{ quick_view_classes }}" data-action="open-modal" data-secondary-action="open-quick-view" aria-controls="modal-quick-view-{{ section.id }}" data-product-url="{{ product.url }}">{{ 'collection.product.quick_view' | t }}</button>
+            <button
+              type="button"
+              class="{{ quick_view_classes }}"
+              data-action="open-modal"
+              data-secondary-action="open-quick-view"
+              aria-controls="modal-quick-view-{{ section.id }}"
+              data-product-url="{{ product.url }}">{{ 'collection.product.quick_view' | t }}</button>
           {%- endform -%}
         {%- endcapture -%}
 
@@ -347,9 +397,7 @@
 
   {%- comment -%}
   The complementary product has an exception, where the form is shown outside
-  {%- endcomment -%}
-
-  {%- if complementary_products and show_add_to_cart -%}
+  {%- endcomment -%}{%- if complementary_products and show_add_to_cart -%}
     {{- quick_buy_form -}}
   {%- endif -%}
 </div>
