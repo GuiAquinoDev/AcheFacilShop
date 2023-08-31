@@ -9466,6 +9466,7 @@ cursor: pointer;
 .product-item__price-list {
   margin-top: -5px;
   margin-bottom: -5px;
+  line-height: 1;
 }
 
 .product-item__price-list .price {
@@ -9477,7 +9478,15 @@ cursor: pointer;
 .product-item__price-list .price-promotion {
   font-size: 14px;
   font-weight: bold;
-  
+  color: #432e52;
+}
+
+.product-item__price-list .price-compare {
+    color: var(--text-color);
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 16px));
+    text-decoration: line-through;
+    -webkit-text-decoration-color: rgba(var(--text-color-rgb),.7);
+    text-decoration-color: rgba(var(--text-color-rgb),.7);
 }
 
 
