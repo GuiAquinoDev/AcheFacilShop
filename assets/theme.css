@@ -12316,8 +12316,12 @@ cursor: pointer;
  */
 
 .payment-list {
-
-  background: url({{ 'payment-flags.svg' | asset_url }});
+  display: flex;
+  flex-wrap: wrap;
+  display: block;
+  text-align: center;
+  top: -3px;
+  position: relative;
 }
 
 .payment-list__item {
