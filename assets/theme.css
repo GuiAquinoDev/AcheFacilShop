@@ -4461,14 +4461,14 @@ body:not(.is-tabbing) textarea:focus {
   margin-top: 12px;
   width: 100%;
   background: none !important;
-  border: 2px solid var(--text-color);
-  color: var(--text-color);
+  border: 2px solid var(--footer-body-text-color);
+  color: var(--footer-body-text-color);
 }
 
 .form__submit--tight:hover {
-  background: var(--accent-background);
+  background: var(--footer-accent-color);
   color: var(--footer-background-color);
-  border: 2px solid var(--accent-background);
+  border: 2px solid var(--footer-accent-color);
 }
 
 .form__spam-disclaimer {
