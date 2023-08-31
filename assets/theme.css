@@ -9026,7 +9026,7 @@ shopify-payment-terms {
 
 .price {
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 24px));
-  color: var(--accent-color);
+  color: #606781;
 }
 
 .price--highlight {
@@ -9476,20 +9476,10 @@ cursor: pointer;
 }
 
 .product-item__price-list .price-promotion {
-  font-size: 14px;
+  font-size: 13.3333px;
   font-weight: bold;
   color: #432e52;
 }
-
-.product-item__price-list .price-compare {
-    color: var(--text-color);
-    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 16px));
-    text-decoration: line-through;
-    -webkit-text-decoration-color: rgba(var(--text-color-rgb),.7);
-    text-decoration-color: rgba(var(--text-color-rgb),.7);
-}
-
-
 
 .product-item__vendor {
   display: block;
@@ -9506,6 +9496,8 @@ cursor: pointer;
 
 .product-item__title {
   margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-item__title + .product-item__vendor {
@@ -9530,7 +9522,7 @@ cursor: pointer;
 }
 
 .product-item .price--compare {
-  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
 }
 
 .product-item__reviews-badge {
