@@ -54,8 +54,11 @@
         "footer-0": {
           "type": "text",
           "settings": {
-            "title": "About the shop",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+            "mostrar_logotipo": true,
+            "logotipo_footer": "shopify:\/\/shop_images\/logo-ache-facil-120.png",
+            "logo_max_width_footer": 180,
+            "title": "Atendimento ao CLIENTE",
+            "content": "<p><strong>E-mail: <\/strong>contato@achefacilshop.com.br<br\/><strong>WhatsApp:<\/strong> +55 (12) 99166-6818<\/p>"
           }
         },
         "footer-1": {
@@ -68,7 +71,7 @@
           "type": "newsletter",
           "settings": {
             "title": "Newsletter",
-            "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+            "subheading": "<p>Assine nossa newsletter e receba as melhores ofertas DE GRAÇA!<\/p>"
           }
         }
       },
