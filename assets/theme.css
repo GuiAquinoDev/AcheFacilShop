@@ -5447,7 +5447,7 @@ select option {
   }
 
   .footer__aside {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .footer__aside-item--copyright {
@@ -5460,6 +5460,12 @@ select option {
   .footer__aside-item--localization,
   .footer__aside-item--copyright {
     width: auto;
+  }
+
+  .footer__aside-item-payment {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
 }
 
@@ -12339,10 +12345,7 @@ cursor: pointer;
  */
 
 .payment-list {
-  display: flex;
-  flex-wrap: wrap;
-  display: block;
-  text-align: center;
+ 
   top: -3px;
   position: relative;
 }
