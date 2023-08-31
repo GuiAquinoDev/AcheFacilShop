@@ -202,8 +202,17 @@
         {%- endif -%}
 
         <div class="footer__aside-item footer__aside-item--copyright hidden-lap-and-up">
-          <p>{{ copyright_info }}</p>
+          <p class="footer__aside-item-cnpj">© {{ shop.name }}</p> {{ section.settings.company-info }}
         </div>
+        
+        <div class="footer__aside-item-payment">
+          <a href="{{ section.settings.norton_security}}">
+            {% render 'icon', icon: 'norton' %}
+          </a>
+
+
+        </div>
+     
       </aside>
     </div>
   </div>
