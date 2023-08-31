@@ -1,1 +1,92 @@
-{"type":"footer","name":"Footer group","sections":{"text-with-icons":{"type":"text-with-icons","blocks":{"item-1":{"type":"item","settings":{"icon":"bi-delivery","title":"Free shipping","content":"<p>Short content about your store<\/p>"}},"item-2":{"type":"item","settings":{"icon":"bi-returns","title":"Satisfied or refunded","content":"<p>Short content about your store<\/p>"}},"item-3":{"type":"item","settings":{"icon":"bi-customer-support","title":"Top-notch support","content":"<p>Short content about your store<\/p>"}},"item-4":{"type":"item","settings":{"icon":"bi-secure-payment","title":"Secure payments","content":"<p>Short content about your store<\/p>"}}},"block_order":["item-1","item-2","item-3","item-4"],"settings":{"stack_mobile":false}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"text","settings":{"title":"About the shop","content":"<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"}},"footer-1":{"type":"links","settings":{"menu":"footer"}},"footer-2":{"type":"newsletter","settings":{"title":"Newsletter","subheading":"<p>A short sentence describing what someone will receive by subscribing<\/p>"}}},"block_order":["footer-0","footer-1","footer-2"],"settings":{"show_social_media":true,"show_payment_icons":true,"show_locale_selector":true,"show_country_selector":true}}},"order":["text-with-icons","footer"]}
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-mobile-payment",
+            "title": "Compra Segura",
+            "content": "<p>Ambiente  seguro para pagamentos online<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-fast-delivery",
+            "title": "Frete Grátis",
+            "content": "<p>Envio rápido e acompanhado com código de rastreio<br\/><\/p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-love",
+            "title": "Suporte Profissional",
+            "content": "<p>Equipe de suporte de extrema qualidade a semana toda<br\/><\/p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-returns",
+            "title": "Satisfação ou Reembolso",
+            "content": "<p>Caso haja algo, devolvemos seu dinheiro com velocidade<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "settings": {
+        "stack_mobile": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "settings": {
+            "title": "About the shop",
+            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+          }
+        },
+        "footer-1": {
+          "type": "links",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "footer-2": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "footer-2"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "show_payment_icons": true,
+        "show_locale_selector": true,
+        "show_country_selector": true
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
+}
