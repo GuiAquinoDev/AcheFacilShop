@@ -5339,6 +5339,12 @@ select option {
   border-color: rgba(var(--footer-body-text-color-rgb), 0.5);
 }
 
+  .footer__aside-item-payment {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 @media screen and (max-width: 640px) {
   .footer__block-item {
     margin-right: calc(-1 * var(--mobile-container-gutter));
@@ -5465,12 +5471,6 @@ select option {
   .footer__aside-item--localization,
   .footer__aside-item--copyright {
     width: auto;
-  }
-
-  .footer__aside-item-payment {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
   }
 }
 
