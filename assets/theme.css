@@ -7211,9 +7211,9 @@ select option {
   .nav-bar__item {
     position: relative;
     display: inline-flex;
-    align-items: center
+    align-items: center;
     gap: 6px;
-    padding: 12px 0;
+    padding: 17px 0;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -9498,6 +9498,9 @@ cursor: pointer;
   margin-bottom: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .product-item__title + .product-item__vendor {
