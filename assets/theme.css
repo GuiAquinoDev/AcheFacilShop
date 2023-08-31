@@ -12317,7 +12317,7 @@ cursor: pointer;
 
 .payment-list {
 
-  background: url({{ 'payment-flag.svg' | asset_url }});
+  background: url({{ 'payment-flags.svg' | asset_url }});
 }
 
 .payment-list__item {
