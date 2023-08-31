@@ -11162,8 +11162,10 @@ cursor: pointer;
 
 .text-with-icons__title {
   margin-bottom: 4px;
-  font-weight: bold;
   color: var(--accent-color);
+
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .text-with-icons__icon-wrapper {
@@ -11182,6 +11184,7 @@ cursor: pointer;
 
 .text-with-icons__content > p {
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 640px) {
