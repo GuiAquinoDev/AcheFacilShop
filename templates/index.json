@@ -224,52 +224,58 @@
         "template--20737524760872__cf751c43-5e13-4b71-9bf4-622e8a759c62-item-1": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/bolsa-anti-furto-1200.png",
             "show_overlay": false,
             "overlay_opacity": 50,
-            "stretch_image": false,
-            "background": "#6f42ef",
+            "stretch_image": true,
+            "background": "#4f376a",
+            "second_background": "#f88993",
             "text_color": "#ffffff",
-            "title": "Your heading",
-            "content": "<p>Tell more about your product, collection...<\/p>",
+            "title": "Bolsa Anti Furto",
+            "content": "<p>Por apenas R$: 97,90<\/p>",
             "content_position": "top_left",
             "button_background": "#ffffff",
-            "button_text_color": "#6f42ef",
-            "button_text": "Learn more",
-            "button_link": ""
+            "button_text_color": "#fd7c04",
+            "button_text": "Ver produto",
+            "button_link": "shopify:\/\/products\/bolsa-forever-2-em-1-protecao-rfid-anti-furto"
           }
         },
         "template--20737524760872__cf751c43-5e13-4b71-9bf4-622e8a759c62-item-2": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/top-ajustavel-cor-roxo_32604655-c8e7-4972-8b86-d257c0ce9fd2.png",
             "show_overlay": false,
             "overlay_opacity": 50,
             "stretch_image": false,
-            "background": "#fc2a68",
+            "background": "#4f376a",
+            "second_background": "#f88993",
             "text_color": "#ffffff",
-            "title": "Your heading",
-            "content": "<p>Tell more about your product, collection...<\/p>",
+            "title": "Top Ajustável",
+            "content": "<p>Por apenas R$: 129,90<\/p>",
             "content_position": "top_left",
             "button_background": "#ffffff",
-            "button_text_color": "#fc2a68",
-            "button_text": "Learn more",
-            "button_link": ""
+            "button_text_color": "#fd7c04",
+            "button_text": "Ver produto",
+            "button_link": "shopify:\/\/products\/top-academia-ajustavel-fitness-fashion"
           }
         },
         "template--20737524760872__cf751c43-5e13-4b71-9bf4-622e8a759c62-item-3": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/lixador-skin.png",
             "show_overlay": false,
             "overlay_opacity": 50,
             "stretch_image": false,
-            "background": "#26c1ce",
+            "background": "#4f376a",
+            "second_background": "#f88993",
             "text_color": "#ffffff",
-            "title": "Your heading",
-            "content": "<p>Tell more about your product, collection...<\/p>",
+            "title": "Lixador Skin",
+            "content": "<p>Por apenas R$ 139,90<\/p>",
             "content_position": "top_left",
             "button_background": "#ffffff",
-            "button_text_color": "#26c1ce",
-            "button_text": "Learn more",
-            "button_link": ""
+            "button_text_color": "#fd7c04",
+            "button_text": "Ver produto",
+            "button_link": "shopify:\/\/products\/lixador-skin-smoother™-compre-agora-mesmo-e-receba-um-brinde-exclusivo"
           }
         }
       },
