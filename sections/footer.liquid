@@ -304,22 +304,6 @@
       </aside>
     </div>
   </div>
-
-  {%- if section.settings.show_cookie_bar -%}
-  <aside class="cookie-bar" aria-hidden="true">
-    <div class="container">
-      <div class="cookie-bar__inner">
-        <div class="cookie-bar__text rte">
-          {{- section.settings.text -}}
-        </div>
-
-        {%- if section.settings.accept_button != blank -%}
-          <button type="button" class="cookie-bar__button button button--secondary" data-action="accept-terms">{{ section.settings.accept_button | escape }}</button>
-        {%- endif -%}
-      </div>
-    </div>
-  </aside>
-{%- endif -%}
 </footer>
 
 
@@ -354,35 +338,12 @@
         "type": "header",
         "content": "Country/region selector",
         "info": "To add a country/region, go to your [currency settings.](/admin/settings/payments)"
-      }, 
-      {
+      }, {
         "type": "checkbox",
         "id": "show_country_selector",
         "label": "Show country/region selector",
         "default": true
-      },
-      {
-      "type": "header",
-      "content": "Barra de Cookie"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_cookie_bar",
-      "label": "Mostrar barra de cookies",
-      "default": true
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "Texto",
-      "default": "<p>Use this bar to show information about your cookie policy.</p>"
-    },
-    {
-      "type": "text",
-      "id": "accept_button",
-      "label": "Botão aceitar",
-      "default": "Accept"
-    }
+      }
     ],
     "blocks": [
       {
