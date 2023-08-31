@@ -9428,6 +9428,8 @@ cursor: pointer;
 .product-item__image-wrapper {
   display: block;
   margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .product-item__image-wrapper .placeholder-svg {
