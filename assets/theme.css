@@ -7211,8 +7211,10 @@ select option {
   .nav-bar__item {
     position: relative;
     display: inline-flex;
+    align-items: center
     gap: 6px;
-    padding: 17px 0;
+    padding: 12px 0;
+    text-align: center;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
@@ -9028,8 +9030,9 @@ shopify-payment-terms {
 }
 
 .price--highlight {
-  margin-right: 0.7em;
-  color: var(--product-on-sale-accent);
+  margin-right: 0.3em;
+  color: #432e52;
+  font-weight: 700;
 }
 
 .price--compare {
@@ -9473,12 +9476,11 @@ cursor: pointer;
 }
 
 .product-item__price-list .price-list span {
-  font-size: 10pt;
+  font-size: 14px;
   font-weight: bold;
-  color: var(--product-cor-do-preco);
-  flex: auto;
-  display: block;
 }
+
+
 
 .product-item__vendor {
   display: block;
