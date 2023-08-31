@@ -7213,7 +7213,9 @@ select option {
     display: inline-flex;
     gap: 6px;
     padding: 17px 0;
-
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
     color: var(--header-text-color);
   }
 
@@ -9468,6 +9470,14 @@ cursor: pointer;
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.product-item__price-list .price-list span {
+  font-size: 10pt;
+  font-weight: bold;
+  color: var(--product-cor-do-preco);
+  flex: auto;
+  display: block;
 }
 
 .product-item__vendor {
