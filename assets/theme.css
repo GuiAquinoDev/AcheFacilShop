@@ -5458,7 +5458,7 @@ select option {
     align-self: flex-end;
     margin-top: 0 !important;
     margin-bottom: -8px;
-    text-align: left;
+    text-align: center;
   }
 
   .footer__aside-item--localization,
