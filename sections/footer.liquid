@@ -16,7 +16,6 @@
                 {%- if block.settings.mostrar_logotipo -%}
                   <img
                     class="img-footer-logotype"
-                    style="max-width: {{ block.settings.logo_max_width_footer }}px; margin-bottom: 24px;"
                     width="{{ block.settings.logotipo_footer.width }}"
                     height="{{ block.settings.logotipo_footer.height }}"
                     src="{{ block.settings.logotipo_footer | img_url: image_size, scale: 5 }}"
