@@ -5288,6 +5288,10 @@ select option {
   padding: 5px 0;
 }
 
+.footer__link-item a:hover{
+  color: var(--footer-text-color);
+}
+
 .footer__newsletter-form {
   margin-top: 20px;
 }
