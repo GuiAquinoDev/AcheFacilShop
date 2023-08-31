@@ -8,9 +8,9 @@
         "item-1": {
           "type": "item",
           "settings": {
-            "icon": "bi-delivery",
-            "title": "Free shipping",
-            "content": "<p>Short content about your store<\/p>"
+            "icon": "bi-mobile-payment",
+            "title": "Compra Segura",
+            "content": "<p>Ambiente  seguro para pagamentos online<\/p>"
           }
         },
         "item-2": {
