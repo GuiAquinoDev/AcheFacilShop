@@ -9464,6 +9464,7 @@ cursor: pointer;
 
 .product-item__price-list:first-child {
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 /* This trick is done to add some spacing in case the prices fall into two lines */
