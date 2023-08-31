@@ -985,6 +985,16 @@ html {
   height: 40px;
 }
 
+.icon--google {
+  width: 101.27px;
+  height: 40px;
+}
+
+.icon--reclame-aqui {
+  width: 139px;
+  height: 24px;
+}
+
 @media (-moz-touch-enabled: 1), (hover: none) {
   .touch-area {
     position: relative;
