@@ -4467,7 +4467,7 @@ body:not(.is-tabbing) textarea:focus {
 
 .form__submit--tight:hover {
   background: var(--footer-accent-color);
-  color: var(--footer-background-color);
+  color: var(--footer-body-text-color);
   border: 2px solid var(--footer-accent-color);
 }
 
