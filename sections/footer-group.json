@@ -54,6 +54,9 @@
         "footer-0": {
           "type": "text",
           "settings": {
+            "mostrar_logotipo": true,
+            "logotipo_footer": "shopify:\/\/shop_images\/logo-ache-facil-shop-140.png",
+            "logo_max_width_footer": 140,
             "title": "About the shop",
             "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
           }
