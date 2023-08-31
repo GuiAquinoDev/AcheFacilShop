@@ -5282,6 +5282,7 @@ select option {
 .footer__aside {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 10px;
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
 }
