@@ -9475,7 +9475,7 @@ cursor: pointer;
   margin-bottom: 5px;
 }
 
-.product-item__price-list .price-list span {
+.product-item__price-list .price-promotion {
   font-size: 14px;
   font-weight: bold;
 }
