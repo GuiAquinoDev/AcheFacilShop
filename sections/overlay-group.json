@@ -1,1 +1,21 @@
-{"type":"custom.overlay","name":"Overlay group","sections":{"popups":{"type":"popups","settings":{}},"privacy-banner":{"type":"privacy-banner","settings":{}}},"order":["popups","privacy-banner"]}
+{
+  "type": "custom.overlay",
+  "name": "Overlay group",
+  "sections": {
+    "popups": {
+      "type": "popups",
+      "settings": {
+      }
+    },
+    "privacy-banner": {
+      "type": "privacy-banner",
+      "settings": {
+        "text": "<p>Utilizamos cookies para melhorar nosso site e sua experiência de compra. Ao continuar navegando em nosso site,<strong>você está de acordo conforme nossa política quando a utilização de cookies.<\/strong><\/p>"
+      }
+    }
+  },
+  "order": [
+    "popups",
+    "privacy-banner"
+  ]
+}
