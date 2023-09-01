@@ -3126,13 +3126,13 @@ body:not(.is-tabbing) textarea:focus {
 }
 
 .cart-recap__note {
-  margin-top: 14px;
+  margin: 14px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
 .cart-recap__note-inner {
-  padding-bottom: 20px;
+  padding: 20px 0 ;
 }
 
 .cart-recap__note-button {
