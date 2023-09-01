@@ -5387,7 +5387,7 @@ select option {
     transition: 0.3s ease-in-out;
   }
 
-  .footer__collapsible-content {
+  =.footer__collapsible-content {
     padding: 0 20px 25px 0;
   }
 
@@ -5423,6 +5423,10 @@ select option {
 
   .footer__block-item .plus-button {
     display: none;
+  }
+
+  .footer__block-item .img-footer-logotype {
+    margin-bottom: 24px;
   }
 
   .footer__localization-form {
