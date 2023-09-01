@@ -364,7 +364,7 @@
 
                     <div class="cart-recap__price-line text--pull">
                       <span class="cart-recap__price-line-label">{{ 'cart.general.total' | t }}</span>
-                      <span class="cart-recap__price-line-price">{{ cart.total_price | money_with_currency }}</span>
+                      <span class="cart-recap__price-line-price">{{ cart.total_price | money }}</span>
                     </div>
 
                     {%- comment -%}
@@ -410,7 +410,7 @@
                         </div>
                       </div>
                     {%- endif -%}
-
+{% comment %} 
                     <div class="cart-recap__notices rte">
                       <p>
                         {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
@@ -423,7 +423,7 @@
                           {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
                         {%- endif -%}
                       </p>
-                    </div>
+                    </div> {% endcomment %}
 
                     <input type="hidden" name="attributes[collection_products_per_page]" value="">
                     <input type="hidden" name="attributes[collection_layout]" value="">

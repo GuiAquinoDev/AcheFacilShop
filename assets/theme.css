@@ -12956,7 +12956,7 @@ cursor: pointer;
   height: 38px;
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 15px));
   border: 1px solid var(--border-color);
-  border-radius: 3px;
+  border-radius: 12px;
   box-shadow: 0 1px 1px rgba(var(--border-color-rgb), 0.2);
   vertical-align: middle;
 }
