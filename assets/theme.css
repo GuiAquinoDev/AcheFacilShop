@@ -9103,9 +9103,11 @@ shopify-payment-terms {
  */
 
 .price-list {
-  display: inline-flex;
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   line-height: 1;
+  gap: 0.5rem;
 }
 
 .price {
