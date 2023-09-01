@@ -1,0 +1,31 @@
+          
+   <div class="product-form__info-shipping">
+ 
+   <!--CORREIOS-->
+
+     {%- render 'icon', icon: 'correios' -%}
+    <div class="product-form__info-shipping-text">
+     <span>{{ section.settings.shipping_title }}</span>
+     <span id="custom-address">Carregando informações...</span>
+    </div>
+   <span class="product-form__info-shipping-method"> Frete Grátis</span>
+
+   <!--CORREIOS-->
+
+   <script>
+    function fetchAndDisplayLocation() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://wtfismyip.com/json', true);
+    xhr.onreadystatechange = function() {
+     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+       var localizacao = JSON.parse(xhr.responseText)['YourFuckingLocation'];
+       var regiao = localizacao.replace(', Brazil', '');
+       document.getElementById('custom-address').innerHTML = 'Envio para <b>' + regiao + ' e Região</b>';
+     }
+    };
+    xhr.send();
+    }
+    
+    document.addEventListener('DOMContentLoaded', fetchAndDisplayLocation);
+    </script>
+</div>
