@@ -372,7 +372,7 @@
           <span class="price--installment">
             Em até {{ installment }}x de
             <span
-              ><b>{{ product.price | divided_by: installment | round: 2 | money }}</b></span
+              ><b>{{ product.price | divided_by: 12 | round: 2 | money }}</b></span
             >
           </span>
 
