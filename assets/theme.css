@@ -8419,6 +8419,9 @@ select option {
 
 .product-gallery__size-limiter {
   margin: 0 auto;
+}
+
+.product-gallery__size-limiter img {
   border-radius: 12px;
 }
 
@@ -8538,6 +8541,10 @@ select option {
   border-radius: 12px;
   transition: border 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.product-gallery__thumbnail img {
+  border-radius: 12px;
 }
 
 .product-gallery__thumbnail.is-nav-selected {
