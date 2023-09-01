@@ -9409,6 +9409,89 @@ shopify-payment-terms {
 
 /**
  * --------------------------------------------------------------------
+ * Kit SWATCH
+ * --------------------------------------------------------------------
+ */
+
+ .kit-swatch-list {
+  margin: -5px -5px -2px -4px;
+}
+
+.kit-swatch {
+  display: flex;
+  margin: 16px 4px;
+}
+
+.kit-swatch__radio {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.kit-swatch__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #dadada;
+  border-radius: 12px;
+  
+  width: 100%;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.kit-swatch__item-save-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.2rem;
+  margin-top: -16px;
+}
+
+.kit-swatch__item-discount-badge {
+    display: inline-block;
+    color: #f4ffff;
+    padding: 4px 10px;
+    border-radius: 10px;
+    background: var(--accent-color);
+    font-weight: var(--text-font-bolder-weight);
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 13px));
+    line-height: 1;
+    vertical-align: top;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.kit-swatch__item-discount-badge-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.kit-swatch__item-discount-badge-price span:first-child {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.kit-swatch__item-discount-badge-price span:last-child {
+  font-weight: bold;
+}
+
+.kit-swatch__item-image img {
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+}
+
+.kit-swatch__item-variant {
+  flex: 1
+}
+
+/**
+ * --------------------------------------------------------------------
  * VARIANT SWATCH
  * --------------------------------------------------------------------
  */
