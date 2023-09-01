@@ -84,10 +84,7 @@
         "show_social_media": true,
         "show_payment_icons": true,
         "show_locale_selector": true,
-        "show_country_selector": true,
-        "show_cookie_bar": true,
-        "text": "<p>Utilizamos cookies para melhorar nosso site e sua experiência de compra. Ao continuar navegando em nosso site,<strong>você está de acordo conforme nossa política quando a utilização de cookies.<\/strong><\/p>",
-        "accept_button": "ENTENDI E FECHAR"
+        "show_country_selector": true
       }
     }
   },
