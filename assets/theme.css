@@ -2584,7 +2584,7 @@ body:not(.is-tabbing) textarea:focus {
 @media screen and (min-width: 641px) {
   .card {
     margin-bottom: 30px;
-    border-radius: 3px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
   }
 
@@ -8419,6 +8419,7 @@ select option {
 
 .product-gallery__size-limiter {
   margin: 0 auto;
+  border-radius: 12px;
 }
 
 .product-gallery__view-in-space {
@@ -8534,7 +8535,7 @@ select option {
   padding: 2px;
   margin: 0 4px;
   border: 2px solid transparent;
-  border-radius: 3px;
+  border-radius: 12px;
   transition: border 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -9490,6 +9491,13 @@ shopify-payment-terms {
   flex: 1
 }
 
+.kit-swatch__radio:checked+.kit-swatch__item {
+  box-shadow: 0 0 0 1px var(--accent-color);
+  border-color: var(--accent-color);
+  background: rgba(var(--accent-color-rgb),.06);
+  color: var(--accent-color);
+}
+
 /**
  * --------------------------------------------------------------------
  * VARIANT SWATCH
@@ -9529,7 +9537,7 @@ shopify-payment-terms {
 
 .variant-swatch__radio:checked + .variant-swatch__item {
   border-color: var(--accent-color);
-  border-radius: 3px;
+  border-radius: 12px;
 }
 
 /* Disabled variation */
