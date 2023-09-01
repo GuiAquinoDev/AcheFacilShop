@@ -6732,6 +6732,17 @@ select option {
   color: #005aff;
 }
 
+.icon--pix {
+  width: 16px;
+  height: 16px;
+  color: #2ebdaf;
+}
+
+.icon--correios {
+  width: 65px;
+  height: 65px;
+}
+
 .video-wrapper .icon--play {
   position: absolute;
   left: calc(50% - 40px);
