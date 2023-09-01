@@ -2319,7 +2319,7 @@ body:not(.is-tabbing) textarea:focus {
 }
 
 .button--secondary {
-  background: var(--product-on-sale-accent);
+  border: 2px solid var(--product-on-sale-accent);
   color: var(--product-on-sale-accent);
 }
 
