@@ -34,13 +34,45 @@
           "settings": {
             "display_mode": "show_all"
           }
+        },
+        "1d71e909-caba-4b11-8599-7ebf14120acf": {
+          "type": "shipping_estimator",
+          "settings": {
+            "shipping_estimator_default_country": "United States",
+            "show_refunds_policy": true
+          }
+        },
+        "449d6c4f-2b79-4eb2-bbc9-b99a31cb8781": {
+          "type": "trust",
+          "settings": {
+            "trust_title": "Payment & Security",
+            "show_payment_icons": true,
+            "custom_security_badge_width": 200
+          }
+        },
+        "e6a0a795-11de-4ecc-9319-130d16503d99": {
+          "type": "store_pickup",
+          "settings": {
+          }
+        },
+        "6c40878b-1d37-4464-adda-91848e548f61": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 10,
+            "show_quick_buy": true
+          }
         }
       },
       "block_order": [
         "product_meta",
         "variant_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "1d71e909-caba-4b11-8599-7ebf14120acf",
+        "449d6c4f-2b79-4eb2-bbc9-b99a31cb8781",
+        "e6a0a795-11de-4ecc-9319-130d16503d99",
+        "6c40878b-1d37-4464-adda-91848e548f61"
       ],
       "settings": {
         "image_size": "small",
