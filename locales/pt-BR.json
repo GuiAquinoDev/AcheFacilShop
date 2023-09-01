@@ -350,7 +350,7 @@
       "taxes_included_but_shipping_at_checkout": "Impostos inclusos. Frete calculado no checkout",
       "taxes_included_and_shipping_policy_html": "Impostos inclusos. <a href=\"{{ link }}\">Frete<\/a> calculado no checkout",
       "total": "Total",
-      "checkout": "Checkout"
+      "checkout": "FINALIZAR COMPRA"
     },
     "items": {
       "decrease_quantity": "Diminuir quantidade em 1",
