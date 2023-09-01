@@ -6726,6 +6726,11 @@ select option {
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
+.icon--checkmark {
+  width: 20px;
+  height: 20px;
+  color: #005aff;
+
 .video-wrapper .icon--play {
   position: absolute;
   left: calc(50% - 40px);
@@ -8613,6 +8618,17 @@ select option {
 
 .product-meta__title {
   margin-bottom: 14px;
+}
+
+.product-meta__checkmark {
+  position: relative;
+  display: inline-block;
+  top: -4px;
+}
+
+.product-meta__quantity {
+  font-size: 12px;
+  color: #b7b7b7;
 }
 
 /* When within a modal, we have to add an extra margin to prevent the title to overlap the close button */
