@@ -2319,19 +2319,13 @@ body:not(.is-tabbing) textarea:focus {
 }
 
 .button--secondary {
-  background: var(--secondary-button-background);
-  color: var(--secondary-button-text-color);
-}
-
-.button--cart {
-    width: 100%;
-    background: none;
-    border: 2px solid var(--product-on-sale-accent);
-    color: var(--product-on-sale-accent);
+  background: var(--product-on-sale-accent);
+  color: var(--product-on-sale-accent);
 }
 
 .button--secondary:hover {
-  background: rgba(var(--secondary-button-background-rgb), 0.8);
+  background: var(--product-on-sale-accent);
+  color: var(--primary-button-text-color);
 }
 
 .button--ternary {
