@@ -8818,6 +8818,39 @@ select option {
   margin-top: 0;
 }
 
+.product-form__info-shipping {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  width: 100%;
+  margin: 24px 0;
+  border: 2px solid #00b27a;
+  border-radius: 12px;
+
+  padding: 10px 15px;
+}
+
+.product-form__info-shipping-text {
+  flex: 1;
+}
+
+.product-form__info-shipping-text span {
+  display: block;
+}
+
+.product-form__info-shipping-text #custom-address  {
+    font-size: 12px;
+    font-weight: 400;
+    color: #00b27a;
+}
+
+.product-form__info-shipping-method {
+    font-weight: 700;
+    color: #00b27a;
+}
+
+
 shopify-payment-terms {
   display: block;
   margin-top: 8px;
