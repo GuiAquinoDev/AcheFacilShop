@@ -9129,6 +9129,24 @@ shopify-payment-terms {
           text-decoration-color: rgba(var(--text-color-rgb), 0.7);
 }
 
+
+.price--installment {
+  font-size: 16px;
+}
+
+.price--pix {
+  display: flex;
+  align-items: center;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 2px 8px!important;
+    color: #2ebdaf;
+    font-size: 12px;
+    border: 1px solid #2ebdaf;
+    gap: 0.5rem;
+}
+
+
 /**
  * --------------------------------------------------------------------
  * INVENTORY AND BAR
