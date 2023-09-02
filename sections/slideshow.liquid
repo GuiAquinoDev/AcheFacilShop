@@ -88,6 +88,20 @@
           </style>
         {%- endcapture -%}
 
+        {%- if forloop.first -%}
+          <script>
+            // Verificar o tamanho da tela para determinar se estamos em um dispositivo móvel
+            if (window.innerWidth <= 768) {
+              // Pré-carregamento crítico para a imagem do primeiro slide em dispositivos móveis
+              var link = document.createElement('link');
+              link.rel = 'preload';
+              link.as = 'image';
+              link.href = '{{ block.settings.image | image_url: width: block.settings.image.width }}';
+              document.head.appendChild(link);
+            }
+          </script>
+        {%- endif -%}
+
         {%- if block.settings.link != blank and block.settings.button_text == blank -%}
           <a href="{{ block.settings.link }}" class="slideshow__slide {% if block.settings.show_overlay %}slideshow__slide--overlay{% endif %} {% if forloop.first %}is-selected{% endif %}" id="block-{{ block.id }}" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
             {{- slide_inner -}}
