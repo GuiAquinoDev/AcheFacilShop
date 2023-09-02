@@ -90,7 +90,7 @@
 
         {%- if forloop.first -%}
           <!-- Pré-carregamento crítico para a imagem do primeiro slide -->
-          <link rel="preload" as="image" href="{{ block.settings.image | image_url: width: block.settings.image.width }}">
+          <link rel="preload" as="image" href="{{ block.settings.image | image_url: width: block.settings.image.width }}" media="(max-width: 768px)">
         {%- endif -%}
 
         {%- if block.settings.link != blank and block.settings.button_text == blank -%}
