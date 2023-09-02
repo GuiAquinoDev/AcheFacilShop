@@ -559,7 +559,7 @@
             <div class="header__action-item">
               <a class="header__action-item-link" href="/pages/{{ section.settings.rastreiopage }}">
                 <div class="header__action-item-content header__action-location">
-                  <div class="header__location-icon icon-state" aria-expanded="false">
+                  <div class="header__location-icon icon-state">
                     <span class="icon-state__primary">
                       {%- render 'icon', icon: 'location' -%}
                     </span>
@@ -579,7 +579,7 @@
               href="{{ routes.cart_url }}"
               {% if settings.cart_type != 'page' and template != 'cart' %}aria-controls="mini-cart"aria-expanded="false"data-action="toggle-mini-cart"{% endif %}data-no-instant>
               <div class="header__action-item-content">
-                <div class="header__cart-icon icon-state" aria-expanded="false">
+                <div class="header__cart-icon icon-state">
                   <span class="icon-state__primary">
                     {%- render 'icon', icon: 'bag' -%}
                     <span class="header__cart-count">{{ cart.item_count }}</span>
