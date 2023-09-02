@@ -64,7 +64,7 @@
         "edge_to_edge": true,
         "section_size": "preserve_ratio",
         "carousel_effect": "slide",
-        "autoplay": false,
+        "autoplay": true,
         "cycle_speed": 8
       }
     },
