@@ -420,7 +420,7 @@
         "one": "Em estoque ({{count}} unidade), pronto para ser enviado",
         "other": "Em estoque ({{count}} unidades), pronto para ser enviado"
       },
-      "add_to_cart": "Adicionar ao carrinho",
+      "add_to_cart": "Comprar agora",
       "sold_out": "Esgotado",
       "pre_order": "Pré-compra",
       "unavailable": "Indisponível",
