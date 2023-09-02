@@ -17,7 +17,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "button_text": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/all"
           }
         },
         "slide-2": {
@@ -34,7 +34,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "button_text": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/all"
           }
         },
         "d739c063-c213-46f8-b729-99ed0d1e07c8": {
@@ -51,7 +51,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "button_text": "",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/all"
           }
         }
       },
