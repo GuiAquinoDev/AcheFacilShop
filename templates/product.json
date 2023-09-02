@@ -53,12 +53,13 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Especiais para você",
         "show_quick_buy": false
       }
     },
     "recently-viewed-products": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "title": "Recently viewed",
         "show_quick_buy": false
