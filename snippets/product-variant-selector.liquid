@@ -425,8 +425,9 @@
         {%- endif -%}
       </div>
     </div>
-
+{{ product.metafields.custom.size_chart  }}
          {% for size in product.metafields.custom.size_chart %}
+    
               <tr>
                 <td>{{ size.Tamanho }}</td>
                 <td>{{ size.Busto }}</td>
