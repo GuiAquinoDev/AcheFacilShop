@@ -4,19 +4,36 @@
       <p class="empty-state__heading heading h1">Acompanhe Seu Pedido</p>
       <p class="empty-state__description">Informe o código de rastreio</p>
 
-      <form class="empty-state__quick-form" action="{{ routes.search_url }}" method="get">
-        <input type="hidden" name="type" value="product">
-
-        <div class="form__connected-item">
-          <div class="form__input-wrapper form__input-wrapper--labelled">
-            <input id="4O4-search" type="text" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off">
-            <label for="4O4-search" class="form__floating-label">Buscar pedido...</label>
-          </div>
-
-          <button type="submit" class="form__connection button button--primary" aria-label="{{ '404.general.search' | t }}">{% render 'icon', icon: 'search' %}</button>
-        </div>
-      </form>
+      <div style="text-align: center;">
+        <input type="text" id="YQNum" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off" maxlength="50">
+        <input type="button" value="TRACK" onclick="doTrack()" class="form__connection button button--primary">
+      </div>
+      <div id="YQContainer"></div>
 
     </div>
   </div>
 </section>
+
+<!--Script code can be put at the bottom of the page, wait until the page is loaded then execute.-->
+<script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+<script type="text/javascript">
+    function doTrack() {
+        var num = document.getElementById("YQNum").value;
+        if (num === "") {
+            alert("Digite o número de rastreio.");
+            return;
+        }
+        YQV5.trackSingle({
+            // Required, Specify the carrier content container ID.
+            YQ_ContainerId: "YQContainer",
+            // Optional, specify tracking result height, max height 800px, default is 560px.
+            YQ_Height: 560,
+            // Optional, select carrier, default to auto identify.
+            YQ_Fc: "0",
+            // Optional, specify UI language, default language is automatically detected based on the browser settings.
+            YQ_Lang: "en",
+            // Required, specify the number needed to be tracked.
+            YQ_Num: num
+        });
+    }
+</script>
