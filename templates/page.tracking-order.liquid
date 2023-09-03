@@ -4,12 +4,20 @@
       <p class="empty-state__heading heading h1">Acompanhe Seu Pedido</p>
       <p class="empty-state__description">Informe o código de rastreio</p>
 
-      <div style="text-align: center;">
-        <input type="text" id="YQNum" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off" maxlength="50">
-        <input type="button" value="TRACK" onclick="doTrack()" class="form__connection button button--primary">
-      </div>
-      <div id="YQContainer"></div>
+      <form class="empty-state__quick-form" action="{{ routes.search_url }}" method="get">
+        <input type="hidden" name="type" value="product">
 
+        <div class="form__connected-item">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input id="YQNum" type="text" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off" maxlength="50">
+            <label for="4O4-search" class="form__floating-label">Buscar pedido...</label>
+          </div>
+
+          <button type="button" class="form__connection button button--primary" aria-label="{{ '404.general.search' | t }}" onclick="doTrack()">TRACK</button>
+        </div>
+      </form>
+
+      <div id="YQContainer"></div>
     </div>
   </div>
 </section>
