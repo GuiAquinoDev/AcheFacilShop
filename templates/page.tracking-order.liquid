@@ -10,7 +10,7 @@
         <div class="form__connected-item">
           <div class="form__input-wrapper form__input-wrapper--labelled">
             <input id="YQNum" type="text" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off" maxlength="50">
-            <label for="4O4-search" class="form__floating-label">Buscar pedido...</label>
+            <label for="tracking-search" class="form__floating-label">Buscar pedido...</label>
           </div>
 
           <button type="button" class="form__connection button button--primary" aria-label="{{ '404.general.search' | t }}" onclick="doTrack()">{% render 'icon', icon: 'search' %}</button>
@@ -18,6 +18,21 @@
       </form>
 
       <div id="YQContainer"></div>
+
+      <!-- Código de Erro -->
+      <div class="alert alert--error" id="contact-form-error">
+        <ul class="alert__error-list" role="list">
+          {%- for field in form.errors -%}
+            {%- if field == 'form' -%}
+              <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
+            {%- else -%}
+              <li class="alert__error-item">{{ form.errors.translated_fields[field] | capitalize }} {{ form.errors.messages[field] }}</li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+      <!-- Fim do Código de Erro -->
+
     </div>
   </div>
 </section>
@@ -28,9 +43,14 @@
     function doTrack() {
         var num = document.getElementById("YQNum").value;
         if (num === "") {
-            alert("Digite o número de rastreio.");
+            // Exibir o erro quando o campo está vazio
+            document.getElementById("contact-form-error").style.display = "block";
             return;
+        } else {
+            // Esconder o erro se o campo não estiver vazio
+            document.getElementById("contact-form-error").style.display = "none";
         }
+        
         YQV5.trackSingle({
             // Required, Specify the carrier content container ID.
             YQ_ContainerId: "YQContainer",
