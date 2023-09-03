@@ -426,29 +426,7 @@
       </div>
     </div>
 
-         <div id="modal-size-chart" class="modal" aria-hidden="true">
-  <div class="modal__dialog" role="dialog">
-    <header class="modal__header">
-      <h3 class="modal__title heading h2">{{ 'product.general.refund_policy' | t }}</h3>
-      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon', icon: 'close' -%}
-      </button>
-    </header>
-
-    <div class="modal__content">
-      <div class="rte">
-        <span>teste</span>
-        <table>
-          <thead>
-            <tr>
-              <th>Tamanho</th>
-              <th>Busto</th>
-              <th>Cintura</th>
-              <th>Quadril</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for size in product.metafields.custom.size_chart %}
+         {% for size in product.metafields.custom.size_chart %}
               <tr>
                 <td>{{ size.Tamanho }}</td>
                 <td>{{ size.Busto }}</td>
@@ -456,15 +434,6 @@
                 <td>{{ size.Quadril }}</td>
               </tr>
             {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-  oi
-
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
