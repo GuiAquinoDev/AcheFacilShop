@@ -425,16 +425,10 @@
         {%- endif -%}
       </div>
     </div>
-{{ product.metafields.custom.size_chart  }}
-         {% for size in product.metafields.custom.size_chart %}
-    
-              <tr>
-                <td>{{ size.Tamanho }}</td>
-                <td>{{ size.Busto }}</td>
-                <td>{{ size.Cintura }}</td>
-                <td>{{ size.Quadril }}</td>
-              </tr>
-            {% endfor %}
+
+          {% render 'size-chart' %}
+  oi
+
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">

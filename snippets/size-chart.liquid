@@ -6,10 +6,9 @@
         {%- render 'icon', icon: 'close' -%}
       </button>
     </header>
-oieee
+
     <div class="modal__content">
       <div class="rte">
-        <span>teste</span>
         <table>
           <thead>
             <tr>
@@ -20,14 +19,21 @@ oieee
             </tr>
           </thead>
           <tbody>
-            {% for size in product.metafields.custom.size_chart %}
+            {% assign size_chart = product.metafields.custom.size_chart %}
+            {% if size_chart != null %}
+              {% for size in size_chart.Medidas %}
+                <tr>
+                  <td>{{ size.Tamanho }}</td>
+                  <td>{{ size.Busto }}</td>
+                  <td>{{ size.Cintura }}</td>
+                  <td>{{ size.Quadril }}</td>
+                </tr>
+              {% endfor %}
+            {% else %}
               <tr>
-                <td>{{ size.Tamanho }}</td>
-                <td>{{ size.Busto }}</td>
-                <td>{{ size.Cintura }}</td>
-                <td>{{ size.Quadril }}</td>
+                <td colspan="4">Não há dados de tamanho disponíveis.</td>
               </tr>
-            {% endfor %}
+            {% endif %}
           </tbody>
         </table>
       </div>
