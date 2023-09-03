@@ -95,38 +95,25 @@
             {%- endif -%}
           {%- endfor -%}
 
-          <div class="form__input-wrapper form__input-wrapper--labelled">
-            <textarea id="contact-form-message" name="contact[body]" rows="8" class="form__field form__field--textarea" aria-label="{{ 'contact.form.message' | t }}" required></textarea>
-            <label for="contact-form-message" class="form__floating-label">{{ 'contact.form.message' | t }}</label>
-          </div>
-
           <button type="submit" class="form__submit {% unless section.settings.show_store_info %}form__submit--centered{% endunless %} button button--primary button--min-width">{{ 'contact.form.submit' | t }}</button>
         {%- endform -%}
       </div>
 
-      {%- if section.settings.show_store_info -%}
         <div class="layout__section layout__section--large-secondary">
           <div class="contact__store-info">
-            {%- if section.settings.store_heading != blank -%}
               <h2 class="contact__store-heading heading h3">{{ section.settings.store_heading | escape }}</h2>
-            {%- endif -%}
 
-            {%- if section.settings.store_image -%}
               <div class="contact__store-image">
                 <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: section.settings.store_image.aspect_ratio }}%">
                   <img loading="lazy" width="{{ section.settings.store_image.width }}" height="{{ section.settings.store_image.height }}" src="{{ section.settings.store_image | img_url: '700x' }}" alt="{{ section.settings.store_image.alt | escape }}">
                 </div>
               </div>
-            {%- endif -%}
 
-            {%- if section.settings.store_info != blank -%}
               <div class="contact__store-text rte">
                 {{ section.settings.store_info }}
               </div>
-            {%- endif -%}
           </div>
         </div>
-      {%- endif -%}
     </div>
   </div>
 </div>
