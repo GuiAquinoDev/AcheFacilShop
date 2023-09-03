@@ -1,102 +1,23 @@
-<div class="section">
-  <div class="container container--medium">
-    <div class="layout">
-      <div class="layout__section">
-        {%- form 'contact', class: 'form' -%}
-            <div class="form__header {% unless section.settings.show_store_info %}text-center{% endunless %}">
-              <h2 class="heading h3">Acompanhe Seu Pedido</h2>
-            </div>
+<section data-section-id="{{ section.id }}" data-section-type="page">
+  <div class="container">
+    <div class="empty-state">
+      <p class="empty-state__heading heading h1">Acompanhe Seu Pedido</p>
+      <p class="empty-state__description">{{ '404.general.content' | t }}</p>
 
-          {%- if form.posted_successfully? -%}
-            <p class="alert alert--success">{{ 'contact.form.successfully_sent' | t }}</p>
-          {%- endif -%}
+      <form class="empty-state__quick-form" action="{{ routes.search_url }}" method="get">
+        <input type="hidden" name="type" value="product">
 
-          {%- if form.errors -%}
-            <div class="alert alert--error" id="contact-form-error">
-              <ul class="alert__error-list" role="list">
-                {%- for field in form.errors -%}
-                  {%- if field == 'form' -%}
-                    <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
-                  {%- else -%}
-                    <li class="alert__error-item">{{ form.errors.translated_fields[field] | capitalize }} {{ form.errors.messages[field] }}</li>
-                  {%- endif -%}
-                {%- endfor -%}
-              </ul>
-            </div>
-          {%- endif -%}
-
-          <div class="form__input-row">
-            <div class="form__input-wrapper form__input-wrapper--labelled">
-              <input id="contact-form-name" type="text" class="form__field form__field--text {% if customer.name != blank %}is-filled{% endif %}" name="contact[name]" aria-label="{{ 'contact.form.name' | t }}" required {% if customer %}value="{{ customer.name }}"{% endif %}>
-              <label for="contact-form-name" class="form__floating-label">{{ 'contact.form.name' | t }}</label>
-            </div>
-
-          
-
-          {%- for block in section.blocks -%}
-            {%- assign field_title = block.settings.title -%}
-
-            {%- if field_title == blank -%}
-              {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
-            {%- endif -%}
-
-            {%- if block.type == 'text' -%}
-              <div class="form__input-wrapper form__input-wrapper--labelled">
-                {%- if block.settings.use_long_text -%}
-                  <textarea id="contact-form-{{ field_title | handle }}" name="contact[{{ field_title | escape }}]" rows="7" class="form__field form__field--textarea" aria-label="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}></textarea>
-                  <label for="contact-form-{{ field_title | handle }}" class="form__floating-label">{{ block.settings.title | escape }}</label>
-                {%- else -%}
-                  <input id="contact-form-{{ field_title | handle }}" type="text" class="form__field form__field--text" name="contact[{{ field_title | escape }}]" aria-label="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}>
-                  <label for="contact-form-{{ field_title | handle }}" class="form__floating-label">{{ block.settings.title | escape }}</label>
-                {%- endif -%}
-              </div>
-            {%- elsif block.type == 'dropdown' -%}
-              {%- assign values = block.settings.values | split: ',' -%}
-
-              {%- if values == empty -%}
-                {%- continue -%}
-              {%- endif -%}
-
-              <div class="form__input-wrapper form__input-wrapper--labelled">
-                <div id="contact-form-{{ field_title | handle }}" class="select-wrapper select-wrapper--primary">
-                  {%- render 'icon', icon: 'arrow-bottom' -%}
-
-                  <select name="contact[{{ field_title | escape }}]" title="{{ block.settings.title | escape }}" required>
-                    <option value="" disabled selected></option>
-
-                    {%- for value in values -%}
-                      {%- assign trim_value = value | strip -%}
-
-                      <option value="{{ trim_value | escape }}">{{ trim_value | escape }}</option>
-                    {%- endfor -%}
-                  </select>
-                </div>
-
-                <label for="contact-form-{{ field_title | handle }}" class="form__floating-label">{{ block.settings.title | escape }}</label>
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-
-          <button type="submit" class="form__submit {% unless section.settings.show_store_info %}form__submit--centered{% endunless %} button button--primary button--min-width">{{ 'contact.form.submit' | t }}</button>
-        {%- endform -%}
-      </div>
-
-        <div class="layout__section layout__section--large-secondary">
-          <div class="contact__store-info">
-              <h2 class="contact__store-heading heading h3">{{ section.settings.store_heading | escape }}</h2>
-
-              <div class="contact__store-image">
-                <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: section.settings.store_image.aspect_ratio }}%">
-                  <img loading="lazy" width="{{ section.settings.store_image.width }}" height="{{ section.settings.store_image.height }}" src="{{ section.settings.store_image | img_url: '700x' }}" alt="{{ section.settings.store_image.alt | escape }}">
-                </div>
-              </div>
-
-              <div class="contact__store-text rte">
-                {{ section.settings.store_info }}
-              </div>
+        <div class="form__connected-item">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input id="4O4-search" type="text" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off">
+            <label for="4O4-search" class="form__floating-label">{{ '404.general.search' | t }}</label>
           </div>
+
+          <button type="submit" class="form__connection button button--primary" aria-label="{{ '404.general.search' | t }}">{% render 'icon', icon: 'search' %}</button>
         </div>
+      </form>
+
+      <a href="{{ routes.root_url }}" class="empty-state__link link link--accented">{{ '404.general.continue_shopping' | t }}</a>
     </div>
   </div>
-</div>
-
+</section>
