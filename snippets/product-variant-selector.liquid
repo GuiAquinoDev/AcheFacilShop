@@ -426,49 +426,6 @@
       </div>
     </div>
 
-      {{ product.metafields.custom.size_chart }}
-     <div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Tamanho</th>
-              <th>Busto</th>
-              <th>Cintura</th>
-              <th>Quadril</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>P</td>
-              <td>{{ product.metafields.custom.size_chart.P.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td>{{ product.metafields.custom.size_chart.M.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>G</td>
-              <td>{{ product.metafields.custom.size_chart.G.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>GG</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Quadril }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
         <span class="product-form__info-title text--strong">{{ 'product.form.inventory' | t }}:</span>
