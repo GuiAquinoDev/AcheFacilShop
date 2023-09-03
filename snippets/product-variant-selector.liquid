@@ -425,8 +425,8 @@
         {%- endif -%}
       </div>
     </div>
-
-  {{ custom.size_chart.Tamanho }}
+    {% assign teste = product.metafields.custom.size_chart %}
+  {{teste}}
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
