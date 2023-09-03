@@ -1,23 +1,11 @@
-<section data-section-type="page">
-  <div class="container container--narrow">
-    <header class="page__header page__header--centered page__header--stack">
-      <h1 class="page__title heading h1">Acompanhe Seu Pedido</h1>
-    </header>
-
-    <div class="page__description rte">
-      <div class="form__input-wrapper form__input-wrapper--labelled"
-    </div>
-  </div>
-</section>
-
-<div {% if page.handle != 'contact' %}class="section"{% endif %}>
+<div class="section">
   <div class="container container--medium">
     <div class="layout">
       <div class="layout__section">
         {%- form 'contact', class: 'form' -%}
           {%- if section.settings.form_heading != blank -%}
             <div class="form__header {% unless section.settings.show_store_info %}text-center{% endunless %}">
-              <h2 class="heading h3">{{ section.settings.form_heading | escape }}</h2>
+              <h2 class="heading h3">Acompanhe Seu Pedido</h2>
 
               {%- if section.settings.form_content != blank -%}
                 {{- section.settings.form_content -}}
