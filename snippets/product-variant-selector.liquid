@@ -427,7 +427,7 @@
     </div>
 
          {% assign size_chart = product.metafields.custom.size_chart %}
-            {{ size_chart }}
+            {{ size_chart.Medidas }}
             {% if size_chart != null %}
               {% for size in size_chart.Medidas %}
                 <tr>
