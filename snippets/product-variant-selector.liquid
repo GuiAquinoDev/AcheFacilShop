@@ -426,8 +426,22 @@
       </div>
     </div>
 
-          {% render 'size-chart' %}
-  oi
+         {% assign size_chart = product.metafields.custom.size_chart %}
+            {{ size_chart }}
+            {% if size_chart != null %}
+              {% for size in size_chart.Medidas %}
+                <tr>
+                  <td>{{ size.Tamanho }}</td>
+                  <td>{{ size.Busto }}</td>
+                  <td>{{ size.Cintura }}</td>
+                  <td>{{ size.Quadril }}</td>
+                </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="4">Não há dados de tamanho disponíveis.</td>
+              </tr>
+            {% endif %}
 
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
