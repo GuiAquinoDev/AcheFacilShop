@@ -383,6 +383,9 @@
             >
           </span>
         </div>
+
+              {% render 'product-size-chart'%}
+
         <div
           class="product-form__price-info"
           style="display: {% if selected_variant.unit_price_measurement %}block{% else %}none{% endif %}"
