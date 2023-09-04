@@ -27,20 +27,7 @@
                 {{- block.settings.content -}}
               </div>
             {%- endif -%}
-
-      <div id="modal-quick-view-{{ section.id }}" class="modal" aria-hidden="true">
-    <div class="modal__dialog modal__dialog--stretch" role="dialog">
-      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon', icon: 'close' -%}
-      </button>
-
-      <div class="modal__loader">
-        {%- render 'icon', icon: 'search-loader' -%}
-      </div>
-
-      <div class="modal__inner"></div>
-    </div>
-  </div>
+          
 
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
