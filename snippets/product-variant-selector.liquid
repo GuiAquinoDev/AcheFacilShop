@@ -425,6 +425,10 @@
         {%- endif -%}
       </div>
     </div>
+{% assign input_string = 'chart_size{"tamanho":"p"} size_chart{"Tamanho":"P"}' %}
+{% assign matches = input_string | scan: '"tamanho":"' %}
+{% assign tamanho_p = matches[0] %}
+{{ tamanho_p }}
 
   {% for i in product.metafields.custom %}
     {%  assign testing = i %}
