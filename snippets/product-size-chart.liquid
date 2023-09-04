@@ -1,12 +1,10 @@
-  <div class="card">
-    <div class="card__section">
+  <div>
       <button data-action="open-modal" aria-controls="modal-size-chart-{{ section.id }}">
         {%- render 'icon', icon: 'size-chart' -%}
 
         Tabela de Medidas
       </button>
     </div>
-  </div>
   
   <div id="modal-size-chart-{{ section.id }}" class="modal" aria-hidden="true">
     <div class="modal__dialog modal__dialog--stretch" role="dialog">
