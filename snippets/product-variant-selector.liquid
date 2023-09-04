@@ -426,7 +426,10 @@
       </div>
     </div>
 
+  {% for size in product.metafields.custom.chart_size %}
   {{ product.metafields.custom.chart_size }}
+    {{ size }}
+  {% endfor %}
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
