@@ -1,58 +1,62 @@
-<div id="modal-size-chart" class="modal" aria-hidden="true">
-  <div class="modal__dialog" role="dialog">
-    <header class="modal__header">
-      <h3 class="modal__title heading h2">{{ 'product.general.refund_policy' | t }}</h3>
-      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon', icon: 'close' -%}
+<div>
+  <div class="card">
+    <div class="card__section">
+      <button data-action="open-modal" aria-controls="modal-size-chart">
+        Tabela de Medidas
+        {%- render 'icon', icon: 'arrow-right' -%}
       </button>
-    </header>
-
-    <div class="modal__content">
-      <div class="rte">
-        <table>
-          <thead>
-            <tr>
-              <th>Tamanho</th>
-              <th>Busto</th>
-              <th>Cintura</th>
-              <th>Quadril</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>P</td>
-              <td>{{ product.metafields.custom.size_chart.P.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td>{{ product.metafields.custom.size_chart.M.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>G</td>
-              <td>{{ product.metafields.custom.size_chart.G.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>GG</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Quadril }}</td>
-            </tr>
-          </tbody>
-        </table>
+    </div>
+  </div>
+  <div id="modal-size-chart" class="modal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog">
+      <header class="modal__header">
+        <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+      </header>
+      <div class="modal__content">
+        <div class="rte">
+          <table>
+            <thead>
+              <tr>
+                <th>Tamanho</th>
+                <th>Cintura</th>
+                <th>Quadril</th>
+                <th>Altura</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for info in product.metafields.custom.chart_size.value %}
+                <tr>
+                  <td>{{ info.variant.tamanho }}</td>
+                  <td>{{ info.variant.cintura }}</td>
+                  <td>{{ info.variant.quadril }}</td>
+                  <td>{{ info.variant.comprimento }}</td>
+                </tr>
+                <tr>
+                  <td>{{ info.second_variant.tamanho }}</td>
+                  <td>{{ info.second_variant.cintura }}</td>
+                  <td>{{ info.second_variant.quadril }}</td>
+                  <td>{{ info.second_variant.comprimento }}</td>
+                </tr>
+                <tr>
+                  <td>{{ info.thirty_variant.tamanho }}</td>
+                  <td>{{ info.thirty_variant.cintura }}</td>
+                  <td>{{ info.thirty_variant.quadril }}</td>
+                  <td>{{ info.thirty_variant.comprimento }}</td>
+                </tr>
+                <tr>
+                  <td>{{ info.fourty_variant.tamanho }}</td>
+                  <td>{{ info.fourty_variant.cintura }}</td>
+                  <td>{{ info.fourty_variant.quadril }}</td>
+                  <td>{{ info.fourty_variant.comprimento }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-{% for info in product.metafields.custom.chart_size.value %}
-  {{ info }}
- <h4 class="product-detail-heading">{{ info.name }}</h4>
- <p>{{ info.height.title }} - {{ info.height.value }}</p>
- <p>{{ info.diameter.title }} - {{ info.diameter.value }}</p>
-{% endfor %}
