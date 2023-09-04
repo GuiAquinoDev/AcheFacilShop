@@ -424,22 +424,28 @@
       </div>
     </div>
 
-    <header class="modal__header">
-      <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
-      <button
-        class="modal__close link"
-        data-action="close-modal"
-        title="{{ 'general.accessibility.close' | t | escape }}"
-      >
-        {%- render 'icon', icon: 'close' -%}
-      </button>
-    </header>
-
     <div class="card__section card__section--tight">
-      <button class="product__refund-policy-link link link--accented" data-action="open-modal" aria-controls="modal-size-chart">Tabela de Medidas {%- render 'icon', icon: 'arrow-right' -%}</button>
+      <button
+        class="product__refund-policy-link link link--accented"
+        data-action="open-modal"
+        aria-controls="modal-size-chart"
+      >
+        Tabela de Medidas
+        {%- render 'icon', icon: 'arrow-right' -%}
+      </button>
     </div>
     <div id="modal-size-chart" class="modal" aria-hidden="true">
       <div class="modal__content" role="dialog">
+        <header class="modal__header">
+          <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
+          <button
+            class="modal__close link"
+            data-action="close-modal"
+            title="{{ 'general.accessibility.close' | t | escape }}"
+          >
+            {%- render 'icon', icon: 'close' -%}
+          </button>
+        </header>
         {% for info in product.metafields.custom.chart_size.value %}
           <table>
             <thead>
