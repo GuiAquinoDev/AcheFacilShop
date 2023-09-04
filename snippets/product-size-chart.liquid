@@ -1,3 +1,7 @@
+<!-- Botão para abrir o modal -->
+<button id="openModalButton">Abrir Modal</button>
+
+<!-- Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -5,8 +9,6 @@
     <p>Conteúdo do seu modal vai aqui.</p>
   </div>
 </div>
-
-<button id="openModalButton">Abrir Modal</button>
 
 <style>
   /* Estilo para o modal */
@@ -47,37 +49,22 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Função para mostrar o modal
-    function showModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.display = "block";
-    }
-
-    // Função para fechar o modal
-    function closeModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.display = "none";
-    }
-
-    // Fecha o modal quando o usuário clica fora dele
-    window.onclick = function (event) {
-      var modal = document.getElementById("myModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+  $(document).ready(function() {
+    // Abre o modal quando o botão for clicado
+    $("#openModalButton").click(function() {
+      $("#myModal").css("display", "block");
+    });
 
     // Fecha o modal quando o usuário clica no botão de fechar
-    var closeButton = document.querySelector(".close");
-    if (closeButton) {
-      closeButton.addEventListener("click", closeModal);
-    }
+    $(".close").click(function() {
+      $("#myModal").css("display", "none");
+    });
 
-    // Abre o modal quando o botão for clicado
-    var openModalButton = document.getElementById("openModalButton");
-    if (openModalButton) {
-      openModalButton.addEventListener("click", showModal);
-    }
+    // Fecha o modal quando o usuário clica fora dele
+    $(window).click(function(event) {
+      if (event.target == $("#myModal")[0]) {
+        $("#myModal").css("display", "none");
+      }
+    });
   });
 </script>
