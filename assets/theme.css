@@ -9047,7 +9047,10 @@ shopify-payment-terms {
 
   .product-block-list__item--description{
     position: absolute;
+    width: calc(50% - 15px);
+    height: 100%;
   }
+  
   .product-block-list__item--info {
     position: absolute;
     top: 0;
