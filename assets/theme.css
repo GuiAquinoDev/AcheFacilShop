@@ -2438,6 +2438,7 @@ body:not(.is-tabbing) textarea:focus {
 
 .card {
   position: relative;
+  z-index: 0;
   margin-bottom: 18px;
   background: var(--secondary-background);
   border-top: 1px solid var(--border-color);
