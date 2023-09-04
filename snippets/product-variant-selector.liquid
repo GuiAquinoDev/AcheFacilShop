@@ -446,7 +446,8 @@
             {%- render 'icon', icon: 'close' -%}
           </button>
         </header>
-  <div class="moda__content">
+  <div class="modal__content">
+  <div class="rte">
         {% for info in product.metafields.custom.chart_size.value %}
           <table>
             <thead>
@@ -485,6 +486,7 @@
             </tbody>
           </table>
         {% endfor %}
+  </div>
   </div>
       </div>
     </div>
