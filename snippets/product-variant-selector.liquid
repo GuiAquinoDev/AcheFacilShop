@@ -384,8 +384,6 @@
           </span>
         </div>
 
-              {% render 'product-size-chart'%}
-
         <div
           class="product-form__price-info"
           style="display: {% if selected_variant.unit_price_measurement %}block{% else %}none{% endif %}"
@@ -409,6 +407,17 @@
           </div>
         </div>
 
+        <div class="card__section card__section--tight">
+          <button
+            class="product__refund-policy-link link link--accented"
+            data-action="open-modal"
+            aria-controls="modal-refunds-policy"
+          >
+            {{ 'product.general.refund_policy' | t }}
+            {%- render 'icon', icon: 'arrow-right' -%}
+          </button>
+        </div>
+
         {{- form | payment_terms -}}
 
         {%- if block.settings.show_taxes_included -%}
@@ -426,7 +435,7 @@
         {%- endif -%}
       </div>
     </div>
-                 
+
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
         <span class="product-form__info-title text--strong">{{ 'product.form.inventory' | t }}:</span>
