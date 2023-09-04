@@ -23,7 +23,7 @@
             "low_inventory_threshold": 0
           }
         },
-        "5f6b0549-2e96-487c-b39c-82da0805a589": {
+        "f10cd954-95f2-4cf1-91da-e51828012b92": {
           "type": "liquid",
           "settings": {
             "title": "Teste",
@@ -47,7 +47,7 @@
       "block_order": [
         "product_meta",
         "variant_selector",
-        "5f6b0549-2e96-487c-b39c-82da0805a589",
+        "f10cd954-95f2-4cf1-91da-e51828012b92",
         "buy_buttons",
         "description"
       ],
