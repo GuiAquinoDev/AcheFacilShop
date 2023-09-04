@@ -8,23 +8,11 @@
     </div>
   </div>
   <div id="apepe" class="modal" aria-hidden="true">
-    <div class="modal__dialog" role="list">
       <header class="modal__header">
         <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
-        <button data-action="toggle-modal" data-target="apepe" class="modal__close link" title="{{ 'general.accessibility.close' | t | escape }}">
-          {%- render 'icon', icon: 'close' -%}
-        </button>
       </header>
-      <div class="modal__content">
-        <div class="rte">
-          <table>
-            <!-- Conteúdo da tabela aqui -->
-          </table>
-        </div>
-      </div>
     </div>
   </div>
-</div>
 
 <script>
   const toggleModalButtons = document.querySelectorAll('[data-action="toggle-modal"]');
