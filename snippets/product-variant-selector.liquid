@@ -425,10 +425,8 @@
         {%- endif -%}
       </div>
     </div>
-{% assign input_string = product.metafields.custom %}
-{% assign matches = input_string | scan: '"tamanho":"' %}
-{% assign tamanho_p = matches[0] %}
-{{ tamanho_p }}
+
+  {{ product.metafields.custom.chart_size.foobar["tamanho"] }}
 
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
