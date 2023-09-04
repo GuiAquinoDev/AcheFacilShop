@@ -435,6 +435,9 @@
       </button>
     </header>
 
+    <div class="card__section card__section--tight">
+      <button class="product__refund-policy-link link link--accented" data-action="open-modal" aria-controls="modal-size-chart">Tabela de Medidas {%- render 'icon', icon: 'arrow-right' -%}</button>
+    </div>
     <div id="modal-size-chart" class="modal" aria-hidden="true">
       <div class="modal__content" role="dialog">
         {% for info in product.metafields.custom.chart_size.value %}
