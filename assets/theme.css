@@ -1034,7 +1034,7 @@ html {
 .table,
 .rte table {
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
 }
 
