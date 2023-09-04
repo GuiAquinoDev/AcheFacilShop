@@ -427,7 +427,8 @@
     </div>
 
   {% for i in product.metafields.custom.chart_size %}
-  {{ product.metafields.custom.chart_size }}
+    {%  assign testing = i %}
+    {{ testing }}
     {{ size }}
   {% endfor %}
 
