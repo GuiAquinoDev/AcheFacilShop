@@ -13,36 +13,20 @@
           <thead>
             <tr>
               <th>Tamanho</th>
-              <th>Busto</th>
+              <th>Altura</th>
               <th>Cintura</th>
               <th>Quadril</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>P</td>
-              <td>{{ product.metafields.custom.size_chart.P.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.P.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td>{{ product.metafields.custom.size_chart.M.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.M.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>G</td>
-              <td>{{ product.metafields.custom.size_chart.G.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.G.Quadril }}</td>
-            </tr>
-            <tr>
-              <td>GG</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Busto }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Cintura }}</td>
-              <td>{{ product.metafields.custom.size_chart.GG.Quadril }}</td>
-            </tr>
+            {% for info in product.metafields.custom.chart_size.value %}
+              <tr>
+                <td>{{ info.name }}</td>
+                <td>{{ info.height.value }}</td>
+                <td>{{ info.diameter.value }}</td>
+                <td>{{ info.diameter.title }}</td>
+              </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>
