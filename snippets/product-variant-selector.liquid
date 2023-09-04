@@ -426,7 +426,11 @@
       </div>
     </div>
 
-  {{ product.metafields.custom.chart_size.foobar[tamanho] }}
+{% for info in product.metafields.custom.size_chart.value %}
+ <h4 class="product-detail-heading">{{ info.name }}</h4>
+ <p>{{ info.height.title }} - {{ info.height.value }}</p>
+ <p>{{ info.diameter.title }} - {{ info.diameter.value }}</p>
+{% endfor %}
 
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
