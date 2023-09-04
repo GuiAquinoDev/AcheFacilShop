@@ -15,27 +15,6 @@
 
           {%- when 'variant_selector' -%}
             {%- render 'product-variant-selector', product: product, form: form, block: block -%}
-
-       <div class="card__section card__section--tight">
-                          <button class="product__refund-policy-link link link--accented" data-action="open-modal" aria-controls="modal-refunds-policy">{{ 'product.general.refund_policy' | t }} {%- render 'icon', icon: 'arrow-right' -%}</button>
-                        </div>
-
-                      <div id="modal-refunds-policy" class="modal" aria-hidden="true">
-                        <div class="modal__dialog" role="dialog">
-                          <header class="modal__header">
-                            <h3 class="modal__title heading h2">{{ 'product.general.refund_policy' | t }}</h3>
-                            <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-                              {%- render 'icon', icon: 'close' -%}
-                            </button>
-                          </header>
-
-                          <div class="modal__content">
-                            <div class="rte">
-                              {{ shop.refund_policy }}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
     
           {%- when 'buy_buttons' -%}
             {%- render 'shipping-method' -%}
