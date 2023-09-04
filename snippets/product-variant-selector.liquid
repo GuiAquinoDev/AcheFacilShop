@@ -425,7 +425,7 @@
         {%- endif -%}
       </div>
     </div>
-{% render size_chart %}
+    
     {% for info in product.metafields.custom.chart_size.value %}
 
     <table>
@@ -439,8 +439,8 @@
           </thead>
           <tbody>
                <tr>
-              <td>{{ info.variante.tamanho }}</td>
-              <td></td>
+              <td>{{ info.variant.tamanho }}</td>
+              <td>{{ info.second_variant.tamanho }}</td>
          
             </tr>
           </tbody>
