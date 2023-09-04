@@ -2,10 +2,10 @@
 {%- assign color_label = 'color,colour,couleur,cor,colore,farbe,색,色,カラー,färg,farve,szín,barva' | split: ',' -%}
 {%- assign product_price_section = false -%}
 
-{%- for tag in product.tags-%}
-    {%- if tag contains 'Kits' %}
-      {%- assign product_price_section = true -%}
-    {%- endif -%}
+{%- for tag in product['tags-'] %}
+  {%- if tag contains 'Kits' %}
+    {%- assign product_price_section = true -%}
+  {%- endif -%}
 {%- endfor -%}
 {%- unless product.has_only_default_variant -%}
   <div class="product-form__variants" {{ block.shopify_attributes }}>
@@ -35,23 +35,21 @@
         {%- else -%}
           {%- assign option_selector_type = 'variant' -%}
         {%- endif -%}
-        
+
       {%- else -%}
-  {%- if color_label contains downcase_option -%}
+        {%- if color_label contains downcase_option -%}
           {%- if block.settings.color_mode == 'block' -%}
             {%- assign option_selector_type = 'block' -%}
           {%- endif -%}
         {%- elsif block.settings.selector_mode == 'block' -%}
-          {%- if product_price_section == true and option.position == 1%}
+          {%- if product_price_section == true and option.position == 1 %}
             {%- assign option_selector_type = 'kit' -%}
           {%- else -%}
-           {%- assign option_selector_type = 'block' -%}
-
+            {%- assign option_selector_type = 'block' -%}
           {%- endif -%}
-
         {%- endif -%}
       {%- endif -%}
-      
+
       <div class="product-form__option" data-selector-type="{{ option_selector_type }}">
         {%- case option_selector_type -%}
           {%- when 'kit' -%}
@@ -426,55 +424,58 @@
       </div>
     </div>
 
+    <header class="modal__header">
+      <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
+      <button
+        class="modal__close link"
+        data-action="close-modal"
+        title="{{ 'general.accessibility.close' | t | escape }}"
+      >
+        {%- render 'icon', icon: 'close' -%}
+      </button>
+    </header>
 
-     <header class="modal__header">
-        <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
-        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-          {%- render 'icon', icon: 'close' -%}
-        </button>
-      </header>
-
-    <div class="modal__content">
-
-    {% for info in product.metafields.custom.chart_size.value %}
-
-    <table>
-      <thead>
-            <tr>
-              <th>Tamanho</th>
-              <th>Cintura</th>
-              <th>Quadril</th>
-               <th>Altura</th>
-            </tr>
-          </thead>
-          <tbody>
-             <tr>
-              <td>{{ info.variant.tamanho }}</td>
-              <td>{{ info.variant.cintura }}</td>
-              <td>{{ info.variant.quadril }}</td>
-              <td>{{ info.variant.comprimento }}</td>
-            </tr>
-               <tr>
-              <td>{{ info.second_variant.tamanho }}</td>
-              <td>{{ info.second_variant.cintura }}</td>
-              <td>{{ info.second_variant.quadril }}</td>
-              <td>{{ info.second_variant.comprimento }}</td>
-            </tr>
-         <tr>
-              <td>{{ info.thirty_variant.tamanho }}</td>
-              <td>{{ info.thirty_variant.cintura }}</td>
-              <td>{{ info.thirty_variant.quadril }}</td>
-              <td>{{ info.thirty_variant.comprimento }}</td>
-            </tr>
-         <tr>
-              <td>{{ info.fourty_variant.tamanho }}</td>
-              <td>{{ info.fourty_variant.cintura }}</td>
-              <td>{{ info.fourty_variant.quadril }}</td>
-              <td>{{ info.fourty_variant.comprimento }}</td>
-            </tr>
-          </tbody>
-    </table>
-{% endfor %}
+    <div id="modal-size-chart" class="modal" aria-hidden="true">
+      <div class="modal__content" role="dialog">
+        {% for info in product.metafields.custom.chart_size.value %}
+          <table>
+            <thead>
+              <tr>
+                <th>Tamanho</th>
+                <th>Cintura</th>
+                <th>Quadril</th>
+                <th>Altura</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ info.variant.tamanho }}</td>
+                <td>{{ info.variant.cintura }}</td>
+                <td>{{ info.variant.quadril }}</td>
+                <td>{{ info.variant.comprimento }}</td>
+              </tr>
+              <tr>
+                <td>{{ info.second_variant.tamanho }}</td>
+                <td>{{ info.second_variant.cintura }}</td>
+                <td>{{ info.second_variant.quadril }}</td>
+                <td>{{ info.second_variant.comprimento }}</td>
+              </tr>
+              <tr>
+                <td>{{ info.thirty_variant.tamanho }}</td>
+                <td>{{ info.thirty_variant.cintura }}</td>
+                <td>{{ info.thirty_variant.quadril }}</td>
+                <td>{{ info.thirty_variant.comprimento }}</td>
+              </tr>
+              <tr>
+                <td>{{ info.fourty_variant.tamanho }}</td>
+                <td>{{ info.fourty_variant.cintura }}</td>
+                <td>{{ info.fourty_variant.quadril }}</td>
+                <td>{{ info.fourty_variant.comprimento }}</td>
+              </tr>
+            </tbody>
+          </table>
+        {% endfor %}
+      </div>
     </div>
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
