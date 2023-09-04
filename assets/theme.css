@@ -6748,6 +6748,7 @@ select option {
 .icon--size-chart {
   width: 14px;
   height: 12px;
+  margin-right: 0.5rem;
 }
 
 .video-wrapper .icon--play {
