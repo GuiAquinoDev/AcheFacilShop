@@ -427,6 +427,7 @@
     </div>
 
 {% for info in product.metafields.custom.size_chart.value %}
+  {{ info }}
  <h4 class="product-detail-heading">{{ info.name }}</h4>
  <p>{{ info.height.title }} - {{ info.height.value }}</p>
  <p>{{ info.diameter.title }} - {{ info.diameter.value }}</p>
