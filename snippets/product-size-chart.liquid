@@ -1,7 +1,7 @@
 <div class="product-block-list__item">
   <div>
     <div>
-      <button id="openModalButton" data-action="open-modal" data-target="apepe">
+      <button data-action="toggle-modal" data-target="apepe">
         Tabela de Medidas
         {%- render 'icon', icon: 'arrow-right' -%}
       </button>
@@ -11,7 +11,7 @@
     <div class="modal__dialog" role="list">
       <header class="modal__header">
         <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
-        <button id="closeModalButton" class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+        <button data-action="toggle-modal" data-target="apepe" class="modal__close link" title="{{ 'general.accessibility.close' | t | escape }}">
           {%- render 'icon', icon: 'close' -%}
         </button>
       </header>
@@ -27,17 +27,14 @@
 </div>
 
 <script>
-  const openModalButton = document.getElementById('openModalButton');
-  const closeModalButton = document.getElementById('closeModalButton');
+  const toggleModalButtons = document.querySelectorAll('[data-action="toggle-modal"]');
   const modal = document.getElementById('apepe');
 
-  openModalButton.addEventListener('click', function() {
-    modal.classList.add('modal--open');
-    modal.setAttribute('aria-hidden', 'false');
-  });
-
-  closeModalButton.addEventListener('click', function() {
-    modal.classList.remove('modal--open');
-    modal.setAttribute('aria-hidden', 'true');
+  toggleModalButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      modal.classList.toggle('modal--open');
+      const isHidden = modal.getAttribute('aria-hidden') === 'true';
+      modal.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+    });
   });
 </script>
