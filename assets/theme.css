@@ -6745,6 +6745,11 @@ select option {
   height: 65px;
 }
 
+.icon--size-chart {
+  width: 14px;
+  height: 12px;
+}
+
 .video-wrapper .icon--play {
   position: absolute;
   left: calc(50% - 40px);
