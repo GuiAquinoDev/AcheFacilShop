@@ -426,8 +426,26 @@
       </div>
     </div>
 {% render size_chart %}
-
     {% for info in product.metafields.custom.chart_size.value %}
+
+    <table>
+      <thead>
+            <tr>
+              <th>Tamanho</th>
+              <th>Cintura</th>
+              <th>Quadril</th>
+               <th>Altura</th>
+            </tr>
+          </thead>
+          <tbody>
+               <tr>
+              <td>{{ info.P }}</td>
+              <td>{{ info.Cintura }}</td>
+         
+            </tr>
+          </tbody>
+    </table>
+
 
  <h4 class="product-detail-heading">{{ info.name }}</h4>
  <p>{{ info.height.title }} - {{ info.height.value }}</p>
