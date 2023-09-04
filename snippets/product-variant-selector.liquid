@@ -425,15 +425,11 @@
         {%- endif -%}
       </div>
     </div>
-{% assign input_string = 'chart_size{"tamanho":"p"} size_chart{"Tamanho":"P"}' %}
+{% assign input_string = product.metafields.custom %}
 {% assign matches = input_string | scan: '"tamanho":"' %}
 {% assign tamanho_p = matches[0] %}
 {{ tamanho_p }}
 
-  {% for i in product.metafields.custom %}
-    {%  assign testing = i %}
-    {{ testing }}
-  {% endfor %}
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
