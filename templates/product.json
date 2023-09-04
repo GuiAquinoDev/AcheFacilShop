@@ -23,6 +23,14 @@
             "low_inventory_threshold": 0
           }
         },
+        "5f6b0549-2e96-487c-b39c-82da0805a589": {
+          "type": "liquid",
+          "settings": {
+            "title": "Teste",
+            "liquid": "<div>\n  <div class=\"card\">\n    <div class=\"card__section\">\n      <button data-action=\"open-modal\" aria-controls=\"modal-size-chart\">\n        Tabela de Medidas\n        {%- render 'icon', icon: 'arrow-right' -%}\n      <\/button>\n    <\/div>\n  <\/div>\n  <div id=\"modal-size-chart\" class=\"modal\" aria-hidden=\"true\">\n    <div class=\"modal__dialog\" role=\"dialog\">\n      <header class=\"modal__header\">\n        <h3 class=\"modal__title heading h2\">Compare as medidas com esta tabela.<\/h3>\n        <button class=\"modal__close link\" data-action=\"close-modal\" title=\"{{ 'general.accessibility.close' | t | escape }}\">\n          {%- render 'icon', icon: 'close' -%}\n        <\/button>\n      <\/header>\n      <div class=\"modal__content\">\n        <div class=\"rte\">\n          <table>\n            <thead>\n              <tr>\n                <th>Tamanho<\/th>\n                <th>Cintura<\/th>\n                <th>Quadril<\/th>\n                <th>Altura<\/th>\n              <\/tr>\n            <\/thead>\n            <tbody>\n              {% for info in product.metafields.custom.chart_size.value %}\n                <tr>\n                  <td>{{ info.variant.tamanho }}<\/td>\n                  <td>{{ info.variant.cintura }}<\/td>\n                  <td>{{ info.variant.quadril }}<\/td>\n                  <td>{{ info.variant.comprimento }}<\/td>\n                <\/tr>\n                <tr>\n                  <td>{{ info.second_variant.tamanho }}<\/td>\n                  <td>{{ info.second_variant.cintura }}<\/td>\n                  <td>{{ info.second_variant.quadril }}<\/td>\n                  <td>{{ info.second_variant.comprimento }}<\/td>\n                <\/tr>\n                <tr>\n                  <td>{{ info.thirty_variant.tamanho }}<\/td>\n                  <td>{{ info.thirty_variant.cintura }}<\/td>\n                  <td>{{ info.thirty_variant.quadril }}<\/td>\n                  <td>{{ info.thirty_variant.comprimento }}<\/td>\n                <\/tr>\n                <tr>\n                  <td>{{ info.fourty_variant.tamanho }}<\/td>\n                  <td>{{ info.fourty_variant.cintura }}<\/td>\n                  <td>{{ info.fourty_variant.quadril }}<\/td>\n                  <td>{{ info.fourty_variant.comprimento }}<\/td>\n                <\/tr>\n              {% endfor %}\n            <\/tbody>\n          <\/table>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+            "display_mode": "show_all"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -39,6 +47,7 @@
       "block_order": [
         "product_meta",
         "variant_selector",
+        "5f6b0549-2e96-487c-b39c-82da0805a589",
         "buy_buttons",
         "description"
       ],
