@@ -269,26 +269,8 @@
         {%- endcase -%}
       </div>
     {%- endfor -%}
-    <div class="card__section card__section--tight">
-                          <button class="product__refund-policy-link link link--accented" data-action="open-modal" aria-controls="modal-refunds-policy">{{ 'product.general.refund_policy' | t }} {%- render 'icon', icon: 'arrow-right' -%}</button>
-                        </div>
-  
-         <div id="modal-refunds-policy" class="modal" aria-hidden="true">
-                        <div class="modal__dialog" role="dialog">
-                          <header class="modal__header">
-                            <h3 class="modal__title heading h2">{{ 'product.general.refund_policy' | t }}</h3>
-                            <button  type="button" class="" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-                              {%- render 'icon', icon: 'close' -%}
-                            </button>
-                          </header>
+    {% render 'product-size-chart' %}
 
-                          <div class="modal__content">
-                            <div class="rte">
-                              {{ shop.refund_policy }}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
     <div class="no-js product-form__option">
       <label class="product-form__option-name text--strong" for="product-select-{{ product.id }}">
         {{- 'product.form.variant' | t -}}
