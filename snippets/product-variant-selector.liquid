@@ -427,6 +427,13 @@
     </div>
 {% render size_chart %}
 
+    {% for info in product.metafields.custom.chart_size.value %}
+
+ <h4 class="product-detail-heading">{{ info.name }}</h4>
+ <p>{{ info.height.title }} - {{ info.height.value }}</p>
+ <p>{{ info.diameter.title }} - {{ info.diameter.value }}</p>
+{% endfor %}
+
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
         <span class="product-form__info-title text--strong">{{ 'product.form.inventory' | t }}:</span>
