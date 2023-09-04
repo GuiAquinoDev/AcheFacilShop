@@ -425,7 +425,17 @@
         {%- endif -%}
       </div>
     </div>
-    
+
+
+     <header class="modal__header">
+        <h3 class="modal__title heading h2">Compare as medidas com esta tabela.</h3>
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+      </header>
+
+    <div class="modal__content">
+
     {% for info in product.metafields.custom.chart_size.value %}
 
     <table>
@@ -465,6 +475,7 @@
           </tbody>
     </table>
 {% endfor %}
+    </div>
 
     {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
       <div class="product-form__info-item">
