@@ -269,7 +269,10 @@
         {%- endcase -%}
       </div>
     {%- endfor -%}
-    {% render 'product-size-chart' %}
+
+    {% if product.metafields.custom.chart_size.value %}
+      {% render 'product-size-chart' %}
+    {% endif %}
 
     <div class="no-js product-form__option">
       <label class="product-form__option-name text--strong" for="product-select-{{ product.id }}">
@@ -407,7 +410,6 @@
             </span>
           </div>
         </div>
-
 
         {{- form | payment_terms -}}
 
