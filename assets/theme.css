@@ -8854,11 +8854,7 @@ select option {
   flex: 1;
 }
 
-.product-form__info-shipping-text span {
-  display: block;
-}
-
-.product-form__info-shipping-text #custom-interval {
+.product-form__info-shipping-text #custom-address {
   font-size: 13px;
 }
 
