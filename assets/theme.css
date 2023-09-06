@@ -8858,7 +8858,7 @@ select option {
   display: block;
 }
 
-.product-form__info-shipping-text #custom-info  {
+.product-form__info-shipping-text #custom-interval  {
     font-size: 12px;
     font-weight: 400;
     color: #00b27a;
