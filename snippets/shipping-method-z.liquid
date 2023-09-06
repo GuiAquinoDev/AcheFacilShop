@@ -37,8 +37,8 @@
         var meses = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
 
-        var prazoMin = somaDiasUteis(new Date(), {{ settings.first_date_free_ship }});
-        var prazoMax = somaDiasUteis(new Date(), {{ settings.interval_date_free_ship }});
+        var prazoMin = somaDiasUteis(new Date(), 9);
+        var prazoMax = somaDiasUteis(new Date(), 16);
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://wtfismyip.com/json', true);
