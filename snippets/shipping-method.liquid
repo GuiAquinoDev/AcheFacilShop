@@ -12,20 +12,34 @@
 
    <!--CORREIOS-->
 
-   <script>
-    function fetchAndDisplayLocation() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://wtfismyip.com/json', true);
-    xhr.onreadystatechange = function() {
-     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-       var localizacao = JSON.parse(xhr.responseText)['YourFuckingLocation'];
-       var regiao = localizacao.replace(', Brazil', '');
-       document.getElementById('custom-address').innerHTML = 'Envio para <b>' + regiao + ' e Região</b>';
-     }
-    };
-    xhr.send();
-    }
-    
-    document.addEventListener('DOMContentLoaded', fetchAndDisplayLocation);
-    </script>
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var meses = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
+
+        // Função para calcular a data estimada de entrega
+        function calcularDataEntrega() {
+            var prazoMin = new Date();
+            var prazoMax = new Date();
+
+            prazoMin.setDate(prazoMin.getDate() + 9); // Adicione 9 dias úteis
+            prazoMax.setDate(prazoMax.getDate() + 16); // Adicione 16 dias úteis
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://wtfismyip.com/json', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    var localizacao = JSON.parse(xhr.responseText)['YourFuckingLocation'];
+                    var regiao = localizacao.replace(', Brazil', '');
+
+                    document.getElementById('custom-address').innerHTML = 'Envio para <b>' + regiao + ' e Região</b>';
+                    document.getElementById('custom-interval').innerHTML = 'Previsão de entrega: <span style="font-weight: 500;">' + prazoMin.getDate() + ' de ' + meses[prazoMin.getMonth()] + ' e ' + prazoMax.getDate() + ' de ' + meses[prazoMax.getMonth()] + '</span>';
+                    document.getElementById('custom-shipping').style.display = 'flex';
+                }
+            };
+            xhr.send();
+        }
+
+        calcularDataEntrega();
+    });
+</script>
