@@ -19,6 +19,8 @@
 
 
           {%- when 'buy_buttons' -%}
+                      {%- render 'shipping-method-z' -%}
+
             {%- render 'shipping-method' -%}
 
             {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
