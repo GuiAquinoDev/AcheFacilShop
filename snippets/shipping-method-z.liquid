@@ -37,28 +37,28 @@
         var meses = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
 
-        var prazoMin = somaDiasUteis(new Date(), /* Coloque aqui o valor desejado para settings.first_date_free_ship */);
-        var prazoMax = somaDiasUteis(new Date(), /* Coloque aqui o valor desejado para settings.interval_date_free_ship */);
+        var prazoMin = somaDiasUteis(new Date(), {{ settings.first_date_free_ship }});
+        var prazoMax = somaDiasUteis(new Date(), {{ settings.interval_date_free_ship }});
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://wtfismyip.com/json", true);
+        xhr.open('GET', 'https://wtfismyip.com/json', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var local = JSON.parse(xhr.responseText);
                 var localizacao = local['YourFuckingLocation'];
                 var regiao = localizacao.replace(", Brazil", "");
 
-                var shipAddress = document.querySelector(".ship-address");
-                var shipInterval = document.querySelector(".ship-interval");
+                document.querySelector(".ship-address").innerHTML = '{{ 'product.general.for' | t }}' + " " + regiao + " " + '{{ 'product.general.and_region' | t }}';
+                document.querySelector(".ship-interval").innerHTML = '{{ 'product.general.receive_between' | t }}' + ": " + "<span style='font-weight: 500;'>" + prazoMin.getDate() + " de " + meses[prazoMin.getMonth()] + " e " + prazoMax.getDate() + " de " + meses[prazoMax.getMonth()];
 
-                shipAddress.innerHTML = 'Seu texto personalizado' + " " + regiao + " " + 'Seu outro texto personalizado';
-                shipInterval.innerHTML = 'Seu terceiro texto personalizado' + ": " + "<span style='font-weight: 500;'>" + prazoMin.getDate() + " de " + meses[prazoMin.getMonth()] + " e " + prazoMax.getDate() + " de " + meses[prazoMax.getMonth()];
-
-                var freeShipping = document.getElementById("free-shipping");
-                freeShipping.style.display = "flex";
+                document.querySelector("#free-shipping").style.display = "flex";
             }
         };
         xhr.send();
     }
 
-    document.addEventListener('shopify:section:
+    document.addEventListener('shopify:section:load', function (event) {
+        estimar();
+    });
+    estimar();
+</script>
