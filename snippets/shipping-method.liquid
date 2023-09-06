@@ -31,7 +31,7 @@
                     var localizacao = JSON.parse(xhr.responseText)['YourFuckingLocation'];
                     var regiao = localizacao.replace(', Brazil', '');
 
-                    document.getElementById('custom-address').innerHTML = '<strong>Frete Grátis:</strong> para <b>' + regiao + ' e Região</b>';
+                    document.getElementById('custom-address').innerHTML = '<strong>Frete Grátis:</strong> para ' + regiao + ' e Região.';
                     document.getElementById('custom-interval').innerHTML = 'Previsão de entrega: <span style="font-weight: 500;">' + prazoMin.getDate() + ' de ' + meses[prazoMin.getMonth()] + ' e ' + prazoMax.getDate() + ' de ' + meses[prazoMax.getMonth()] + '</span>';
                     document.getElementById('custom-shipping').style.display = 'flex';
                 }
