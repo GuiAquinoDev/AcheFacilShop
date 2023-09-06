@@ -395,19 +395,19 @@
       "refund_policy": "Política de reembolso",
       "include_taxes": "Taxas inclusas",
       "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link link--accented\">Frete calculado<\/a> no checkout",
+      "buy_by_whatsapp": "Comprar pelo whatsapp",
+      "guaranteed_purchase": "Compra garantida",
+      "free_exchange": "Troca Grátis",
+      "free_shipping": "Frete Grátis",
+      "for": "para",
+      "and_region": "e Região",
+      "receive_between": "Receba entre",
+      "zip_code": "CEP",
+      "amount": "Valor total",
       "reviews_count": {
         "zero": "Sem avaliações",
         "one": "{{ count }} avaliação",
-        "other": "{{ count }} avaliações",
-        "buy_by_whatsapp": "Comprar pelo whatsapp",
-        "guaranteed_purchase": "Compra garantida",
-        "free_exchange": "Troca Grátis",
-        "free_shipping": "Frete Grátis",
-        "for": "para",
-        "and_region": "e Região",
-        "receive_between": "Receba entre",
-        "zip_code": "CEP",
-        "amount": "Valor total"
+        "other": "{{ count }} avaliações"
       }
     },
     "labels": {
