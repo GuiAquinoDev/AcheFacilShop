@@ -8858,6 +8858,10 @@ select option {
   display: block;
 }
 
+.product-form__info-shipping-text #custom-interval {
+  font-size: 13px;
+}
+
 .product-form__info-shipping-text #custom-interval  {
     font-size: 12px;
     font-weight: 400;
