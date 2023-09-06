@@ -8858,7 +8858,7 @@ select option {
   display: block;
 }
 
-.product-form__info-shipping-text #custom-address  {
+.product-form__info-shipping-text #custom-info  {
     font-size: 12px;
     font-weight: 400;
     color: #00b27a;
