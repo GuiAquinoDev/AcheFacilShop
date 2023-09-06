@@ -9,7 +9,7 @@
 
 <script defer="defer">
     function somaDiasUteis(data, dias) {
-        if(isNaN(dias) || !(data instanceof Date)) {
+        if (isNaN(dias) || !(data instanceof Date)) {
             return;
         }
 
@@ -37,22 +37,28 @@
         var meses = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
 
-        var prazoMin = somaDiasUteis(new Date(), {{ settings.first_date_free_ship }});
-        var prazoMax = somaDiasUteis(new Date(), {{ settings.interval_date_free_ship }});
+        var prazoMin = somaDiasUteis(new Date(), /* Coloque aqui o valor desejado para settings.first_date_free_ship */);
+        var prazoMax = somaDiasUteis(new Date(), /* Coloque aqui o valor desejado para settings.interval_date_free_ship */);
 
-        $.getJSON( "https://wtfismyip.com/json", function(local) {
-            var localizacao = local['YourFuckingLocation'];
-            var regiao = localizacao.replace(", Brazil", "");
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://wtfismyip.com/json", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var local = JSON.parse(xhr.responseText);
+                var localizacao = local['YourFuckingLocation'];
+                var regiao = localizacao.replace(", Brazil", "");
 
-            $(".ship-address").html(`{{ 'product.general.for' | t }}` + " " + regiao + " " + `{{ 'product.general.and_region' | t }}` );
-            $(".ship-interval").html(`{{ 'product.general.receive_between' | t }}` + ": " + "<span style='font-weight: 500;'>"+prazoMin.getDate() + " de " + meses[prazoMin.getMonth()] + " e " + prazoMax.getDate() + " de " + meses[prazoMax.getMonth()]);
+                var shipAddress = document.querySelector(".ship-address");
+                var shipInterval = document.querySelector(".ship-interval");
 
-            $("#free-shipping").css("display", "flex");
-        });
+                shipAddress.innerHTML = 'Seu texto personalizado' + " " + regiao + " " + 'Seu outro texto personalizado';
+                shipInterval.innerHTML = 'Seu terceiro texto personalizado' + ": " + "<span style='font-weight: 500;'>" + prazoMin.getDate() + " de " + meses[prazoMin.getMonth()] + " e " + prazoMax.getDate() + " de " + meses[prazoMax.getMonth()];
+
+                var freeShipping = document.getElementById("free-shipping");
+                freeShipping.style.display = "flex";
+            }
+        };
+        xhr.send();
     }
 
-    document.addEventListener('shopify:section:load', function (event) {
-        estimar();
-    });
-    estimar();
-</script>
+    document.addEventListener('shopify:section:
